@@ -1,0 +1,28 @@
+2022-07-25
+
+Coming here to update the html and so. Doing it proper for uploading on Git.
+
+Will need some Javascript function that hides the dropdown onclick content brought from mobile size. Then I guess we
+will have so they are shown again when it's resized. This shall be possible in CSS though, right? By the viewport.
+
+Can put IDs on the dropdownclass and then hide the ID if there is some viewport size?
+
+Gotta fix the issue with the sidenav, then I will upload it to Github and let any more processing be arbitrary.
+
+Have fixed the issue now. It was simple as just making sure the responsive designed worked properly and hide
+the display of dropdown content on bigger viewport and showing on smaller. Easy.
+
+If I remember it correctly there shall be a symptom when a user is using smaller viewports that it keeps
+the last clicked item as automatically hovered. I think it was something like that in this case that
+turned the background of the dropdown red.
+
+Since I can't test it currently I will just throw in come hovercolor white in the smaller viewports to
+see if it works.
+
+Update again: It shall already be fixed now as I see I have already set it responsive to only show on
+bigger viewports.
+
+Guess we are ready for Github and leave the rest of development arbitrary
+
+
+document.documentElement.clientWidth

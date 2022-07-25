@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Landing page for one of the Teleperformance Referrals programs. Recruiting and expanding with leading Telecom">
+  <meta name="keywords" content="recruiting, greece, telecom, customerservice, teleperformance, relocate">
+  <meta name="author" content="professor_oats">
+  <meta name="viewport" content="width=device-width, intial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  
+  <base href="/set/folder/path/here" target="_blank">
+  <link rel="stylesheet" type="text/css" href="ref_greece.css">		<!-- in hosting environments this must be preceeded with '/' sometimes -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Times">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Verdana">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball">
+
+
+  <!-- NOTICE ME SENPAI -->
+  <!-- Since codig without auto-completion: Make sure to check the "" marks -->
+  <!-- Comments in <style> is made simply with /* */ or code is affected -->
+  <!-- Comments in <script> are made simply with // or /* */, hence Javascript -->
+
+  <!-- Far ahead in the future I will catergorise the elements with standard notation for SEO, Learn from WGR -->
+
+  <!-- Always MOBILE FIRST (or atleast responsive huehuehuheu)-->
+  <!-- Make sure to follow A11y -->
+
+  <!-- 2021-07-02: Currently this landingpage has no breadcrumbs and no backpage function -->
+
+
+  <!-- 2022-07-25: Coming back here with updates to tidy up some things in code
+	   Currently the elements float over each other when resizing browser windows from small to big with the
+	   sidenav elements active. Progress can be read in lognew.txt -->
+
+  <!-- Quick notice: The scroll arrow is a corpse from an old idea. It's unused currently -->
+
+  <!-- Update 2022-07-25: It's now fixed. No need for extra Javascripts and so. Just had to hide the dropdown when in bigger viewport and show it
+       as block for lower viewports -->
+  
+</head>
+  
+  
+<body id="main">
+
+  	<div class="container_content clearfix">					<!-- Clearfix clears way before and after div content (thanks to selectors)-->
+		<div class="container_frontpage_headimg" id="headimg" role="img" aria-label="cover image portraiting Greece">
+			<div class="headline">Looking for job in Greece?</div>
+			<!-- <div class="w3-display-bottommiddle" id="window_bottom">	<!-- Add this again when done with section 2
+				Start here
+				<span class="big_scroll_arrow_down">
+					<img src="Pictures/my_scroll_down_white.png" alt="white arrow down" onclick="scroll_arrow_function()" role="button">
+				</span>
+			</div> -->
+		</div>
+		<span class="clearfix"></span>
+		
+		<div id="emailhead">Send mail to:</div>
+		<div id="email">work.international.greece@gmail.com</div>			<!-- Change this mail adress later -->
+		<ul class="sidenav">
+			<li class="hov_color"><a onclick="start_function();start_mobile()" role="button">Start</a>
+			  <div class="container_dropdown">My name is Johnny. I am an employee of Teleperformance here in Greece and I will be 
+			    your guide in this recruiting process.<br></br>
+				<b>First</b> of all I would like to say welcome to this opportunity of joining us in one of Europe's most beautiful 
+				countries. On this landingpage you will be able to find answers about the program and if you have any question
+				you can mail them to me.<br></br>
+				<b>Secondly</b> start navigating using the menu and read about our company and how I will refer you
+				directly to our closest interviewer. If you got here through any of my links you should know a little already.</div>
+			</li>
+			<li class="hov_color"><a onclick="information_function();information_mobile()" role="button">Information</a>
+			  <div class="container_dropdown">Here is a little information about the company and why you easily 
+				can work abroad thanks to our programs:<br></br>
+				<b>Teleperformance</b> is a multilingual international company providing support for customers all over the world.
+				We are specialised in customers service with always adopting personnel to ensure the best customers
+				relations to any major company. Each person is important to Teleperformance and we combine human touch
+				and high technology to deliver extraordinary customer experiences.<br></br>
+				<b>Currently</b> we are looking for people with different backgrounds and languages to join our team in customers service.
+				You choose what language you apply for and will work at one of our offices here in Greece.<br></br>
+				<b>To</b> make this possible Teleperfomance provides a relocation packages with free airline tickets, guidance on your journey
+				and paid hotel appartments during your whole stay. Working in Greece you also get two extra salaries each year.
+				More info about this you will get in the next step of the recruitment process.</div>
+			</li>
+			<li class="hov_color"><a onclick="what_happens_function();what_happens_mobile()" role="button">What happens now?</a>
+			  <div class="container_dropdown">Here I will give you brief information about the process of recruiting you to the company:<br></br>
+				<b>Stage 1</b> - You read information on this website and decide whether you want to work in Greece.<br></br>
+				<b>Stage 2</b> - You send CV to my email with short information about your latest work related to service.<br></br>
+				<b>Stage 3</b> - I directly forward your CV by referring you to one of our closest interviewers/recruiters.<br></br>
+				<b>Stage 4</b> - Recruiter will look on the CV and book you for an interview.<br></br>
+				<b>Stage 5</b> - You will get feedback by phone call from either me or recruiter to make sure we are on the same track.<br></br>
+				<b>Stage 6</b> - Hopefully new job for you abroad together with fully paid appartment + free airline tickets.<br></br>
+				<b>In short</b> - This is a way for me to refer you to the company, increasing your odds of recruitment.</div>
+			</li>
+			<li class="hov_color"><a onclick="apply_here_function();apply_here_mobile()" role="button">Apply here</a>
+			  <div class="container_dropdown"><b>Send mail to:</b><br></br>
+				<span style="color:blue">work.international.greece@gmail.com</span><br></br>
+				<b>Attach</b> CV (pdf) and describe your latest work experience.
+				Write what language you apply for and prefer when you work (example: Swedish, English, Arabic, German, Hebreic)
+				and what your native language is.<br></br>
+				Suggested form to fill in and copy:<br></br>
+				<b>I apply for language:</b><br></br>
+				<b>I am native in language:</b><br></br>
+				<b>Brief experience in service from:</b><br></br>
+				<b> My personal interests are:</b><br></br>
+				All your information is treated in accordance with <b>GDPR.</b><br></br>
+				If you have any more questions I will be able to answer them on the mail.<br></br>
+				See you soon,<br></br>Johnny Teichter</div>
+			</li>
+			<li class="hov_color"><a onclick="links_function();links_mobile()" role="button">Links</a>
+			  <div class="container_dropdown"><b>Official website</b><br></br>
+				<a href="https://www.teleperformance.com/en-us" style="color:blue">https://www.teleperformance.com/en-us</a><br></br>
+				<b>Teleperformance - Location Greece</b><br></br>
+				<a href="https://www.teleperformance.com/en-us/our-locations/greece" style="color:blue">
+				  https://www.teleperformance.com/en-us/our-locations/greece</a><br></br>
+				<b>Teleperformance Nordic (For service of Nordic languages) - Chania</b><br></br>
+				<a href="https://career.teleperformancecareer.com/departments/tp-crete" style="color:blue">
+				  https://career.teleperformancecareer.com/departments/tp-crete</a><br></br>
+				<a href="https://www.instagram.com/teleperformance_chania/?hl=en" style="color:blue">
+				  https://www.instagram.com/teleperformance_chania/?hl=en</a></div>
+			</li>
+		</ul>
+		<div class="container_text_middle">
+			<h1 class="center_content big_text" id="headshift">Welcome abroad and Καλημέρα!</h1>
+			<img class="center_picture my_block" id="profile_img" src="Pictures/start.jpg" alt="this is me"><br></br>  <!-- In hosting environments Pictures must be preceeded with '/' sometimes -->
+			<p class="text_middle" id="shapeshift"> My name is Johnny. I am an employee of Teleperformance here in Greece and I will be your guide
+			in this recruiting process.<br></br>
+			<b>First</b> of all I would like to say welcome to this opportunity of joining us in one of Europe's most beautiful
+			countries. On this landingpage you will be able to find answers about the program and if you have any question
+			you can mail them to me.<br></br>
+			<b>Secondly</b> start navigating using the menu to the left, read about our company and how I will refer you
+			directly to our closest interviewer. If you got here through any of my links you should know a little already.</p><br></br>
+		</div>
+	</div>
+
+	<script>
+		function scroll_arrow_function(){
+			//Create a media condition that targets viewports at least 768px wide - CSS tricks
+			const mediaQuery = window.matchMedia('(max-width: 1400px)')
+			//Check if the media query is true
+			if (mediaQuery.matches) {
+			// Then trigger an alert
+			  alert('Media Query Matched!')		// 300px here is okey. Perhaps optimise later 
+			}
+			else {
+			  document.getElementById('headimg').style.height="200px";
+			}
+			document.getElementById('window_bottom').style.display="none";
+		}
+
+		
+		function start_function(){
+			document.getElementById('headshift').innerHTML="Welcome abroad and Καλημέρα!";
+			document.getElementById('profile_img').src='Pictures/start.jpg';
+			document.getElementById('shapeshift').innerHTML="My name is Johnny. I am an employee of Teleperformance\
+			here in Greece and I will be your guide in this recruiting process.<br></br>\
+			<b>First</b> of all I would like to say welcome to this opportunity of joining us in one of Europe's most beautiful\
+			countries. On this landingpage you will be able to find answers about the program and if you have any question\
+			you can mail them to me.<br></br>\
+			<b>Secondly</b> start navigating using the menu to the left, read about our company and how I will refer you\
+			directly to our closest interviewer. If you got here through any of my links you should know a little already.";
+		}
+		
+		function information_function(){
+			document.getElementById('headshift').innerHTML="Information";
+			document.getElementById('profile_img').src='Pictures/information.jpg';
+			document.getElementById('shapeshift').innerHTML="Here is a little information about the company\
+			and why you easily can work abroad thanks to our programs:<br></br>\
+			<b>Teleperformance</b> is a multilingual international company providing support for customers all over the world.\
+			We are specialised in customers service with always adopting personnel to ensure the best customers\
+			relations to any major company. Each person is important to Teleperformance and we combine human touch\
+			and high technology to deliver extraordinary customer experiences.<br></br>\
+			<b>Currently</b> we are looking for people with different backgrounds and languages to join our team in customers service.\
+			You choose what language you apply for and will work at one of our offices here in Greece.<br></br>\
+			<b>To</b> make this possible Teleperfomance provides a relocation packages with free airline tickets, guidance on your journey\
+			and paid hotel appartments during your whole stay. Working in Greece you also get two extra salaries each year.\
+			More info about this you will get in the next step of the recruitment process.<br></br>";
+			}
+		
+		function what_happens_function(){
+			document.getElementById('headshift').innerHTML="What happens now?";
+			document.getElementById('profile_img').src='Pictures/what_happens_small2.png';
+			document.getElementById('shapeshift').innerHTML="Here I will give you brief information about the process of recruiting you to the company:<br></br>\
+			<b>Stage 1</b> - You read information on this website and decide whether you want to work in Greece.<br></br>\
+			<b>Stage 2</b> - You send CV to my email with short information about your latest work related to service.<br></br>\
+			<b>Stage 3</b> - I directly forward your CV by referring you to one of our closest interviewers/recruiters.<br></br>\
+			<b>Stage 4</b> - Recruiter will look on the CV and book you for an interview.<br></br>\
+			<b>Stage 5</b> - You will get feedback by phone call from either me or recruiter to make sure we are on the same track.<br></br>\
+			<b>Stage 6</b> - Hopefully new job for you abroad together with fully paid appartment + free airline tickets.<br></br>\
+			<b>In short</b> - This is a way for me to refer you to the company, increasing your odds of recruitment.";
+		}
+
+		// Always vary ' and " in js, otherwise \"color:green\"
+		function apply_here_function(){
+			document.getElementById('headshift').innerHTML="Apply here";
+			document.getElementById('profile_img').src='Pictures/apply_here_small.png';
+			document.getElementById('shapeshift').innerHTML='<h3>Send mail to:</h3>\
+			<span style="color:blue;font-size:24px">work.international.greece@gmail.com</span><br></br>\
+			<b>Attach</b> CV (pdf) and describe your latest work experience.\
+			Write what language you apply for and prefer when you work \(example: Swedish, English, Arabic, German, Hebreic\)\
+			and what your native language is.<br></br>\
+			Suggested form to fill in and copy:<br></br>\
+			<b>I apply for language:</b><br></br>\
+			<b>I am native in language:</b><br></br>\
+			<b>Brief experience in service from:</b><br></br>\
+			<b> My personal interests are:</b><br></br>\
+			All your information is treated in accordance with <b>GDPR</b>.\
+			If you have any more questions I will be able to answer them on the mail.<br></br>\
+			See you soon,<br></br>Johnny Teichter';
+		}
+		
+		function links_function(){
+			document.getElementById('headshift').innerHTML="Links";
+			document.getElementById('profile_img').src='Pictures/links_small.jpeg';
+			document.getElementById('shapeshift').innerHTML="<b>Official website</b><br></br>\
+			<a href=https://www.teleperformance.com/en-us>https://www.teleperformance.com/en-us</a><br></br>\
+			<b>Teleperformance - Location Greece</b><br></br>\
+			<a href=https://www.teleperformance.com/en-us/our-locations/greece>https://www.teleperformance.com/en-us/our-locations/greece</a><br></br>\
+			<b>Teleperformance Nordic (For service in Nordic languages) - Chania</b><br></br>\
+			<a href=https://career.teleperformancecareer.com/departments/tp-crete>https://career.teleperformancecareer.com/departments/tp-crete</a><br></br>\
+			<a href=https://www.instagram.com/teleperformance_chania/?hl=en>https://www.instagram.com/teleperformance_chania/?hl=en</a>";
+		}
+		
+		//Mobile starts here
+		var mobile = window.matchMedia("(max-width:1040px)");
+		
+		function start_mobile(){
+			if(mobile.matches){	
+				document.getElementsByClassName('container_dropdown')[0].style.fontSize="16px";
+			}
+		}
+		
+		//In bigger projects I will loop this properly
+		function information_mobile(){
+			if(mobile.matches){	
+				document.getElementsByClassName('container_dropdown')[1].style.fontSize="16px";
+			}
+		}
+		function what_happens_mobile(){
+			if(mobile.matches){	
+				document.getElementsByClassName('container_dropdown')[2].style.fontSize="16px";
+			}
+		}
+		function apply_here_mobile(){
+			if(mobile.matches){	
+				document.getElementsByClassName('container_dropdown')[3].style.fontSize="16px";
+			}
+		}
+		function links_mobile(){
+			if(mobile.matches){	
+				document.getElementsByClassName('container_dropdown')[4].style.fontSize="16px";
+			}
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+ * {							/* Sometimes padding 0 and margin 0 are used here to default every element on the page */
+	box-sizing: border-box;		/* Check if this will be used */
+  }
+
+  body {
+    margin: 0;				/* auto could follow on 0, let's check*/
+    padding: 0;
+	/* max-width: 1200px;			/* Make sure this looks good on all screens, also, put this in container for content */
+	/* float: none; */
+	height: 100%;
+	/*overflow-x: hidden;		/* not enabling user to scroll? Javascript will turn this on when needed */
+								/* Important: check why a white void fills to the right on smaller viewports */
+  }
+
+  .big_text{font-size: 52px;}
+
+  .clearfix:before,				/* This and following clearfixes may be substituted with a more modern one @W3schools */
+  .clearfix:after {				/* See file explanation_clearfix.txt */
+	content: "";
+	display: table;
+  }
+  
+  .clearfix:after {
+	clear: both;
+   }
+  
+  .clearfix {
+	zoom: 1;
+  }
+  
+
+  .container_content {					/* Will this be container of "everything" or do we want more containers for main flow? */
+	position: relative;
+	margin: 0 auto;		/* 0 auto */
+	width: 100%;		/* 1600px before */
+	/* box-shadow: 0 5px 15px #b5b5b5;		/* This is a boxshadow good enough for the pop */
+	/*background-color: #ffffeb;			/* Check this as usual */
+	background-color:#ffffff;
+  }
+  
+  .center_content {				/* This is simply a function to center elements, just add it to class */
+	text-align: center;
+  }
+
+  .text_middle {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 600px;
+	font-size: 20px;
+  }
+
+  .center_picture {
+	margin-left: auto;
+	margin-right: auto;
+  }
+
+  .container_frontpage_headimg {
+	/* width: 1200px; */
+	position: relative;
+	background-image: url("Pictures/wp3990930.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	/* height: 800px; */	/* Add this when done with section 2 */
+	height: 200px;			/* 200px here */
+  }
+
+  /* .container_frontpage_headimg:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(transparent, black);
+  }
+  */
+
+  .headline {			/* Check values here */
+    padding-left: 0px;
+	padding-top: 25px;
+    width: 100%;
+	font-family:arial;
+	font-size:100px;
+	color:white;
+	text-align:center;
+  }
+
+  .w3-display-bottommiddle{position:absolute;left:50%;bottom:50px;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%);
+	background-color: rgba(0, 0, 0, 0.6); color: white; font-family:arial; font-size: 45px; padding-left:50px; padding-right:50px;}
+
+  .big_scroll_arrow_down{display:block; padding-left: 60px; cursor:pointer;}
+
+  .big_scroll_arrow_down:hover{opacity:0.5;}
+
+  .container_section2 {
+	position: relative;
+	/* display: none; */
+	width: 100%;			/*1600px before */
+	/*visibility: hidden; */
+  }
+
+  .container_text_middle {
+	position: relative;
+	width: 100%;
+	display: inline-block;
+  }
+
+  .my_block {display: block;}
+
+  #email {							
+    position: fixed;
+    bottom: 15px;
+    left: 30px;
+    width: 300px;	/* This may be changed */
+	color: blue;
+	font-size: 22px;
+  }
+  
+  #email_style {
+    color: blue;
+	font-size: 16px;
+  }
+
+  #emailhead{
+	position: fixed;
+	bottom: 36px;
+	left: 30px;
+	width: 300px;	/* This may be changed */
+	color: black;
+	font-size: 22px;
+	font-weight: bold;
+  }
+
+  .container_sidenav{position: relative;}
+
+  ul.sidenav {				
+	list-style-type: none;					
+	margin-left: 30px;		/* 50px */
+	margin-top: 120px;		/* 170px */
+	padding: 0;
+	border-top-style: solid;
+	border-top-color: #9e9e94;					/* #929287 okayish */
+	overflow: hidden;
+	/* background-color: #ffffeb;	/* Check this as usual | This will be put in container_content */
+	font-family: Arial;
+	font-size: 28px;
+	font-weight: bold;
+	float: none;
+	display: inline-block;
+	position: absolute;
+	z-index: 2;
+  }
+
+  ul.sidenav li {
+	display: block;				/* Make list elements stack vertically */
+	padding: 4px 14px;
+	color: black; 				/* Textcolor */
+	text-decoration: none;		/*somethinghere?*/
+	border-style: outset;		/* Using outset as fake shadowing */
+	border-color: #ffffeb;
+	border-left-style: solid;
+	border-left-color: gray;
+  }
+  
+  .container_dropdown{	/* Making this container so I can pseudo display:none a paragraph with height:0 */
+    position: relative;
+    height: auto;
+    background: white;
+	font-size:	0px;
+	font-weight: normal;
+	/* display: none;  */
+  }
+
+  ul.sidenav li a {
+	text-decoration: none;
+	color: black;
+	display:block;				/* This is important, making the link fill whole space in list */
+  }
+
+  ul.sidenav li a:hover {			/* CSS Tricks!! */
+	cursor: pointer;
+  }
+
+  @media screen and (max-width: 1040px) {
+	
+	.container_dropdown{
+		display: block;
+	}
+
+	.container_text_middle {display: none;}
+  }
+
+  @media screen and (min-width: 1041px){
+
+    ul.sidenav li.hov_color:hover {
+	background: red;
+    }
+
+	.container_dropdown{
+		display:none;
+	}
+
+  }
+ 
+  @media screen and (max-width: 800px){		/* Common iPad width is 768, I use 800 as breakpoint for hipster things */
+
+/*	.container_frontpage_headimg {
+	  height: 300px;
+	} */
+	
+	.headline {			/* Check values here */
+      padding-left: 0px;
+	  padding-top: 25px;
+      width: 100%;
+	  font-family:arial;
+	  font-size:30px;
+	  text-align:center;
+  }
+
+    ul.sidenav {								
+	  margin-left: 0px;		/* 50px */
+	  margin-top: 0px;		/* 170px */
+	  padding: 0;
+	  width: 100%;
+	  /* background-color: #ffffeb;	/* Check this as usual | This will be put in container_content */
+	  font-size: 28px;
+	  float: left;
+	  display: block;
+	  position: relative;
+     }
+
+  }
+  
+  @media screen and (min-width: 1041px) and (max-width:1346px){
+  	.container_frontpage_headimg{
+	  height: 300px;
+	}
+
+	/*.container_dropdown{
+		display:none;
+	} */
+  }
+  
+  @media screen and (max-width: 1040px) and (min-width:500px){ 
+	.container_frontpage_headimg{
+	  height: 60vw;					/* 497px; */
+	  /* background-image: url("Pictures/wp3990930_small.jpg"); */
+	}
+	
+	.headline {			/* Check values here */
+      padding-left: 0px;
+	  padding-top: 25px;
+      width: 100%;
+	  font-family:arial;
+	  font-size:30px;
+	  text-align:center;
+	}
+
+    ul.sidenav {								
+	  margin-left: 0px;		/* 50px */
+	  margin-top: 0px;		/* 170px */
+	  padding: 0;
+	  width: 100%;
+	  /* background-color: #ffffeb;	/* Check this as usual | This will be put in container_content */
+	  font-size: 28px;
+	  float: left;
+	  display: block;
+	  position: relative;
+    }
+   
+  }
+  
+  @media screen and (max-width: 499px){
+	.container_frontpage_headimg{
+	  background-image: url("Pictures/wp3990930_small.jpg");
+	  height:497px;
+	}
+  }
+		
+   
+  @media screen and (max-width: 1538px){			/*Cosmetics only lol */
+      
+    #email{visibility: hidden;}	
+    #emailhead{visibility: hidden;}
+    
+  }
+  
