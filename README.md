@@ -5,6 +5,8 @@ Different websites made by me.
 To view them just update the path in the header of .html file and then open in your Browser.
 
 ## ReferralGreece
+!!! Disclaimer: Comments in CSS are kept from the learning and development stage. Porque perezoso. !!!
+
 Website I created as a landing page when I worked as Sales Agent for Customer's Service in Crete.
 The company I worked for announced bonuses for personnel acting as 'referrers' to their recruiters.
 
