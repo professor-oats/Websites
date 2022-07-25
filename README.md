@@ -1,7 +1,7 @@
 # Websites
 Different websites made by me
 
-## How to
+## How-to
 To view them just update the path in the header of .html file and then open in your Browser.
 
 ## ReferralGreece
