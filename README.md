@@ -4,7 +4,7 @@ Different websites made by me
 ## How to
 To view them just update the path in the header of .html file and then open in your Browser.
 
-## ReferralGreece:
+## ReferralGreece
 Website I created as a landing page when I worked as Sales Agent for Customer's Service in Crete.
 The company I worked for announced bonuses for personnel acting as 'referrers' to their recruiters.
 
