@@ -30,8 +30,8 @@ Working in Firefox and Microsoft Edge without issues.
 
 ### What I learnt
 As first functioning hosted website I learnt on how to do simple Javascripting to control the Dom and I learnt about hired hosting
-environments, in this case Namecheap. As putting this up much time later I have forgotten about the specific key challenges.
-I started to learning about the importance of A11y and to keep websites 'clean coded' to up the SEO.
+environments, in this case Namecheap. As putting this up on Git much time later I have forgotten about the specific key challenges.
+I started to learn about the importance of A11y and to keep websites 'clean coded' to up the SEO.
 
 
 
