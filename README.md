@@ -38,7 +38,7 @@ I started to learn about the importance of A11y and to keep websites 'clean code
 This is the current setup I use for testing purposes and it's a version of a form exercise on freeCodeCamp.
 
 ### What I learnt
-Mainly using different hacks for CSS cosmetics and to make a roller to cover a website as well as switching background images on different conditions
+Mainly using different hacks for CSS cosmetics and to make a roller to cover a website as well as switching background images on different conditions.
 During the process I have also went through what it takes to do private hosting so have learnt the basics of nginx and to run it in one of my jails on FreeBSD
 and updated so the website runs on a local network.
 
