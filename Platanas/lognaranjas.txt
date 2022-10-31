@@ -1,0 +1,82 @@
+2022-08-18
+Gick igenom kodningen för bakgrundsbilden ej ville fästa korrekt på mobilversionerna.
+Använde mig av view page source på FFC:s exempel och hittade där hur man kunde placera background-image
+korrekt genom att först ge pseudo selectors för before och after på alla element på sidan och sätta dem som
+box-sizing: border-box  så att det inte läggs massor av padding eller margins utanför elementen och därefter 
+koda style för body::before så att de värdena appliceras först.
+
+Använda denna url för gif?
+https://tenor.com/view/donkey-kong-winner-gif-9935501
+https://c.tenor.com/3HkpkVsm7zsAAAAC/donkey-kong.gif
+<div class="tenor-gif-embed" data-postid="9935501" data-share-method="host" data-aspect-ratio="0.909091" data-width="100%"><a href="https://tenor.com/view/donkey-kong-winner-gif-9935501">Donkey Kong GIF</a>from <a href="https://tenor.com/search/donkey-gifs">Donkey GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+eller
+<div style="padding-top:87.600%;position:relative;"><iframe src="https://gifer.com/embed/1Sta" width="100%" height="100%" style='position:absolute;top:0;left:0;' frameBorder="0" allowFullScreen></iframe></div><p><a href="https://gifer.com">via GIFER</a></p>
+
+
+2022-08-23
+So today I pushed of fixing the height properties of the rolldown picture when submitting the form.
+During this process I learnt about of how to declare and set CSS variables.
+In the long run I never used the change to variables so I instead did a body.querySelector("#rollover");
+in thanks to Felix Blaschke for this nifty great solution. 
+ 
+It uses the transition property and changing the style accordingly to do a transform: "translateY(100%)";
+What is more to be done is to make sure it is responsive on the viewports and just do some cosmetic finetuning,
+checking against the FCC criterias to see if the assignment goes through and have it as a fun project to add some more things.
+
+I would like to do a private hosting of this for the funz and I will dedicate this weekend into doing this.
+One idea is to also add some music playing as the dropdown comes. Like the same delay as for the transition.
+Will be fun.
+
+During the week I will make sure the site is proper and by latest the weekend I will have a hosting without DNS ready.
+However, there is a fallpit. The hosting environment I will be running on is Windows so I will either refresh the 
+Dockering skills because the old Mac won't really suffice be on running.
+I will look into Firewalling on Windows unless I want to drive it through the Mac but it will be better if it can be
+turned of during the days. So I guess Windows firewalling it is.
+
+2022-08-27
+Doing some quick tinkering to make it so the website passes for the FCC assignment.
+Then I notice the rollover isn't following the viewport properly so will be fixing that one.
+Since it's weekend I will now add all the functions that shall be on the website and then host it.
+
+2022-08-29
+Weekend became busy with other things so only made it half way. I am compensating by putting time into it
+during the week instead. I did the virtual environment in jail and fixed the Internet connection.
+Got a simple localhost of Nginx up and I am looking through the NATing now.
+Basically one of the jail aliases will be the external interface for the jail and then the FreeBSD host
+will NAT the traffic onto it.
+
+currently on this guide which have a good picture:
+https://elatov.github.io/2011/05/freebsd-firewall-and-nat-with-pf/
+
+At this point I set some easy aliases for the jail to make sure it connects properly.
+However. For NATing to work the proper way I may have to use the loopback as a part of the
+NAT.
+
+2022-09-04
+Today I am continuing in setting up the server and I start to realise that the current configuraton of network aliases won't work since nginx serves the content
+on all ip-adresses at the same time since they are just aliases for each other ensuring to enable internet connection to the jail.
+So I will either find a way to seperate the aliases as they are, if possible or I will put the jails on loopback and when needing multiple jails
+I will alias the loopback addresses instead. In theory this is the way to do it and then I will NAT the traffic into the jails.
+
+I also installed haproxy to see if this can help the serving of content in a good way.
+Currently taking a crash course in NGINX to widen my knowledge of it to get more insight in the setup.
+
+My bad, can be that I forgot that I run the nginx through chroot instead of in the jail itself HAHHAA
+I will run it within jail under it's own user and test again
+No wonder.
+
+2022-10-31
+Had a break from things because had to spend time doing other necessary things. Updated the system and last log update from
+09-04 can be disregarded I guess because the network aliases work as expected. I got a nginx up and running in the jail
+and any computer on my local network can access the website. So I guess this is a great score.
+
+What is need to be done now is to start migrating it so it will be accessible online as well. One of the more important
+things is to make sure to block out martians and also put a somewhat ddos protection in the PF.
+
+Will also make sure so there will only be access in the jailed environment.
+
+Today's current productive/luck score = 0.8/3 = 0.26
+
+As soon as I have the hosting ready I shall be able to make landing webpages easily
+Then I can progress onto E-commerce
