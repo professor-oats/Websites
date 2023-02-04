@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cursor Animation</title>
+  <link rel="stylesheet" href="/Users/shoot/Websites/Landing/styles.css">
+</head>
+
+<body>
+  <div class="posmarkerX">
+  <p><code>pageX</code>: <span id="x">n/a</span></p>
+  <p><code>directionL</code>: <span id="dirL">n/a</span></p>
+  <p><code>directionR</code>: <span id="dirR">n/a</span></p>
+  </div>
+  <div class="posmarkerY">
+    <p><code>pageY</code>: <span id="y">n/a</span></p>
+    <p><code>directionU</code>: <span id="dirU">n/a</span></p>
+    <p><code>directionD</code>: <span id="dirD">n/a</span></p>
+  </div>
+  <div class="cursor"></div>
+  <section class="main">
+    <h1>Cursor Animation</h1>
+
+  </section>
+  <div class="cursor2"></div>
+  <div class="cursor3"></div>
+</body>
+
+<script type="text/javascript">
+
+  const cursor = document.querySelector(".cursor");
+  const cursor2 = document.querySelector(".cursor2");
+  const cursor3 = document.querySelector(".cursor3");
+  var timeout;
+
+  //cursor movement and cursor tracking
+
+  let oldX = 0, oldY = 0;
+  document.addEventListener("mousemove", (e) => {
+    let directionR = 0, directionU = 0, directionL = 0, directionD = 0, diffX = 0, diffY = 0;
+
+    cursor.style.top = e.pageY + 'px';
+    cursor.style.left = e.pageX + 'px';
+    cursor.style.display = 'block';
+
+    cursor2.style.top = e.pageY + 'px';
+    cursor2.style.right = e.pageX + 'px';
+    cursor2.style.display = 'inline-block';
+
+    cursor3.style.top = e.pageY + 20 + 'px';
+    cursor3.style.right = e.pageX + 20 + 'px';
+    cursor3.style.display = 'inline-block';
+
+    document.getElementById("x").innerHTML=e.pageX;
+    document.getElementById("y").innerHTML=e.pageY;
+
+    if (e.pageX < oldX) {
+      document.getElementById("dirR").innerHTML = directionR = 0;
+      document.getElementById("dirL").innerHTML = directionL = 1;
+      diffX = oldX - e.pageX;
+      if (oldY == e.pageY) {
+	document.getElementById("dirU").innerHTML = directionU = 0;
+	document.getElementById("dirD").innerHTML = directionD = 0; 
+      }
+    }
+    else if (e.pageX > oldX) {
+      document.getElementById("dirR").innerHTML = directionR = 1;
+      document.getElementById("dirL").innerHTML = directionL = 0;
+      diffX = e.pageX - diffX;
+      if (oldY == e.pageY) {
+	document.getElementById("dirU").innerHTML = directionU = 0;
+	document.getElementById("dirD").innerHTML = directionD = 0; 
+      }
+    }
+
+    if (e.pageY < oldY) {
+      document.getElementById("dirU").innerHTML = directionU = 1;
+      document.getElementById("dirD").innerHTML = directionD = 0;
+      diffY = oldY - e.pageY;
+      if (oldX == e.pageX) {
+	document.getElementById("dirR").innerHTML = directionR = 0;
+	document.getElementById("dirL").innerHTML = directionL = 0; 
+      }
+    }
+    else if (e.pageY > oldY) {
+      document.getElementById("dirU").innerHTML = directionU = 0;
+      document.getElementById("dirD").innerHTML = directionD = 1;
+      diffY = e.pageY - oldY;
+      if (oldX == e.pageX) {
+	document.getElementById("dirR").innerHTML = directionR = 0;
+	document.getElementById("dirL").innerHTML = directionL = 0; 
+      }
+    }
+
+    /* Testing the coordinates like we do with this code means reasonably
+	little because most of the time, if not always the mousemove is 
+	decided orthagonally but on occasion it tracks diagonally */
+
+
+    oldX = e.pageX;
+    oldY = e.pageY;
+
+
+    //stop animation
+    /*function mouseStopped() {
+      cursor.style.display = 'none';
+    } */
+
+    //hide animation
+    /*
+    clearTimeout(timeout);
+    timeout = setTimeout(mouseStopped, 1000);
+    */
+  });
+
+  document.addEventListener("mouseout", () => {
+    cursor.style.display = 'none';
+  });
+  
+
+
+</script>
+</html>
