@@ -1,0 +1,5 @@
+Fix a connect bar that goes from start to end on Connect after hover.
+Can be done with a lot of squarey squares. :D Change from black to orange through an
+JS incremented list. Bam.
+
+Make an embedded video

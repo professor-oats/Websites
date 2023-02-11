@@ -1,0 +1,6 @@
+Yo bros and brosettes.
+
+Här skapar vi en ny logg där vi går igenom vad vi ska göra härnäst.
+Nu har det redan tjuvstartats med massor gjort så vi hoppas direkt in på mobilanpassningen. Derp.
+
+Tog bort "about" i navbaren och låter där bara stå "contact" eftersom breakpointsen för mobilanpassningen blir bättre på det sättet.
