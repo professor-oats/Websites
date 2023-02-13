@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+<section class="head-sec">
+  <header id="header">
+    <nav id="nav-bar">
+      <a class="nav-link" id="nav1first" href="#header">Home</a>
+      <a class="nav-link" href="#pimage1">Products</a>
+      <a class="nav-link" href="#pimage3">Courses</a>
+      <a class="nav-link" href="#pimage4">Contact</a>
+      <a class="nav-link" id="nav1last" href="#container-pricing">OrderNow</a>
+    </nav>
+    <img id="header-img" src="https://as2.ftcdn.net/v2/jpg/02/22/46/71/1000_F_222467146_s3kNFwBSHzqq0L1RUqw2VJ8hW9anGv8y.jpg" alt="Tower Icon Orange">
+    <p class="img1-text dblock">Connect</p>
+    <p class="img1-text2 dblock">All rights reserved</p>
+
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <p class="img1-text3 dblock center">Want the latest and most recent updated news on tech? Subscribe to our newsletter below!</p>
+      <input type="email" id="email" placeholder="enter your email here" name="email"></input>
+      <input type="submit" id="submit" value="Subscribe">
+      </input>
+    </form>
+
+  </header>
+</section>
+
+<section class="infovid-sec">
+  <div class="vid1-container center">
+          <iframe id="video" src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0" allowfullscreen></iframe>
+      </iframe>
+
+  </div>
+</section>
+<section class="services">
+  <p class="img1-text4 dblock bold center">Take a look into our services</p>
+  <div class="ul1-container">
+    <ul id="ul1">
+      <li id="service1" onclick="showcontent1(this)"><u>Always on Tech ></u></li>
+      <p id="p1" class="hidden clearfix"><img id="pimage1" src="https://static.icy-veins.com/images/classic/og-images/engineering.jpg" alt="gnome tinkering with technical devices">Hello look at me tinkering with the latest devices shipped by Wish. We make sure to always stay up to date with the bleeding edge next gen optimus prime. You know what they say?
+<br><q>A programmer's job is for someone never being able to solve real life's problems.</q></br> - Jonathan Blow</p>
+      <li id="service2" onclick="showcontent2(this)"><u>Educational Programs ></u></li>
+      <p id="p2" class="clearfix hidden"><img id="pimage2" src="https://i5.walmartimages.com/asr/7d2ff6e0-570f-4e8b-8dc8-c8f9f9db32f1.4c0ad2a0b7c4013f7203ffd28c94ff86.jpeg?odnHeight=612&odnWidth=612&odnBg=000000" alt="picture of satanic bible"> Don't be salty for our supreme skills that slay. For a limited time right now we provide you with tutorial content for your best interests and purposes. Perhaps you always wanted to hack your local coffee machine? Maybe you want to become the best sigma you can be and attract all the ladies? Take a look at our courses and you will be surprised.</p>
+      <li id="service3" onclick="showcontent3(this)"><u>Custom Courses - Your needs ></u></li>
+      <p id="p3" class="clearfix hidden"><img id="pimage3" src="https://i.redd.it/pxlemqsx5r051.jpg" alt="picture of your hot teacher"> We have a wide range of expertise and we will assign you a personal consult for the course that you are interested in. You pick a subject and will be paired with one of our skilled personnel. We have educated people within software engineering and social giga chad skills ever since our start in 1984. Sounds like a great deal? It is.</p>
+      <li id="service4" onclick="showcontent4(this)"><u>27/7 Support - Because 24 aint enough ></u></li>
+      <p id="p4" class="clearfix hidden"><img id="pimage4" src="https://pm1.narvii.com/5643/88f425f4c0058165da11d9f3d004eff36aca9a96_hq.jpg" alt="picture of angry tech support">Got a question about our services and looking for package deals? Look into our product page for more info or simply call us on +1 666 666 666 and we will guide to the next step on your business journey. We have our technical support open 27/7.</p>
+    </ul>
+  </div>
+</section>
+<section>
+  <div id="container-pricing">
+  <div class="row-pricing center">
+    <div id="price1" class="column-pricing">
+        <p class="pheader">FREE</p>
+        <p class="pprice">Select me because I'm free</p>
+    </div>
+    <div id="price2" class="column-pricing">
+       <p class="pheader">2 MONTHS</p>
+        <p class="pprice">Pick me because I'm better than free</p>
+    </div>
+    <div id="price3" class="column-pricing">
+        <p class="pheader">6 MONTHS</p>
+        <p class="pprice">Want to be strapped down and locked in for 6 months like a Top G? Pick me.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+</body>
+
+<script>
+
+  let breakpoint = 474;
+
+  //use onClick
+  function showcontent1(input) {
+    input.style.transform='translateX(-800px)';
+    input.style.transition='transform 2s';
+
+    document.getElementById('p1').style.height='260px';
+    document.getElementById('p1').style.transition='height 2s';
+    document.getElementById('pimage1').style.width='35vw';
+    document.getElementById('p1').style.opacity='1';
+    document.getElementById('p1').style.transition='opacity 4s';
+
+    if(document.documentElement.clientWidth < breakpoint) {
+      document.getElementById('service2').style.paddingTop='40px';
+    }
+  }
+
+  function showcontent2(input) {
+    input.style.transform='translateX(-800px)';
+    input.style.transition='transform 2s';
+
+    document.getElementById('p2').style.height='260px';
+    document.getElementById('p2').style.transition='height 2s';
+    document.getElementById('pimage2').style.width='40vw';
+    document.getElementById('p2').style.opacity='1';
+    document.getElementById('p2').style.transition='opacity 4s';
+
+    if(document.documentElement.clientWidth > breakpoint) {
+      document.getElementById('service3').style.paddingTop='40px';
+    }
+    else {
+      document.getElementById('service3').style.paddingTop='60px';
+    }
+  }
+
+    function showcontent3(input) {
+    input.style.transform='translateX(-800px)';
+    input.style.transition='transform 2s';
+
+    document.getElementById('p3').style.height='260px';
+    document.getElementById('p3').style.transition='height 2s';
+    document.getElementById('pimage3').style.width='30vw';
+    document.getElementById('p3').style.opacity='1';
+    document.getElementById('p3').style.transition='opacity 4s';
+    document.getElementById('service4').style.paddingTop='40px';
+  }
+
+    function showcontent4(input) {
+    input.style.transform='translateX(-800px)';
+    input.style.transition='transform 2s';
+
+    document.getElementById('p4').style.height='260px';
+    document.getElementById('p4').style.transition='height 2s';
+    document.getElementById('pimage4').style.width='30vw';
+    document.getElementById('p4').style.opacity='1';
+    document.getElementById('p4').style.transition='opacity 4s';
+  }
+
+
+</script>
+
+</html>
+
