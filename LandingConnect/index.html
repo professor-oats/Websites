@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, intial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
@@ -10,15 +10,23 @@
 <section class="head-sec">
   <header id="header">
     <nav id="nav-bar">
-      <a id="nav1first" href="#home">Home</a>
-      <a href="#products">Products</a>
-      <a href="#courses">Courses</a>
-      <a href="#contact">Contact</a>
+      <a id="nav1first" href="#header">Home</a>
+      <a href="#pimage1">Products</a>
+      <a href="#pimage3">Courses</a>
+      <a href="#pimage4">Contact</a>
       <a id="nav1last" href="#order">OrderNow</a>
     </nav>
     <img id="header-image" src="https://as2.ftcdn.net/v2/jpg/02/22/46/71/1000_F_222467146_s3kNFwBSHzqq0L1RUqw2VJ8hW9anGv8y.jpg" alt="Tower Icon Orange">
     <p class="img1-text dblock">Connect</p>
     <p class="img1-text2 dblock">All rights reserved</p>
+
+    <form id="form">
+      <p class="img1-text3 dblock center">Want the latest and most recent updated news on tech? Subscribe to our newsletter below!</p>
+      <input type="email" id="email" placeholder="enter your email here"></input>
+      <input type="submit" id="submit" value="Subscribe" action="https://www.freecodecamp.com/email-submit">
+      </input>
+    </form>
+
   </header>
 </section>
 
@@ -30,7 +38,7 @@
   </div>
 </section>
 <section class="services">
-  <p class="img1-text3 dblock bold center">Take a look into our services</p>
+  <p class="img1-text4 dblock bold center">Take a look into our services</p>
   <div class="ul1-container">
     <ul id="ul1">
       <li id="service1" onclick="showcontent1(this)"><u>Always on Tech ></u></li>
@@ -45,10 +53,30 @@
     </ul>
   </div>
 </section>
+<section>
+  <div id="container-pricing">
+  <div class="row-pricing center">
+    <div id="price1" class="column-pricing">
+        <p class="pheader">FREE</p>
+        <p class="pprice">Select me because I'm free</p>
+    </div>
+    <div id="price2" class="column-pricing">
+       <p class="pheader">2 MONTHS</p>
+        <p class="pprice">Pick me because I'm better than free</p>
+    </div>
+    <div id="price3" class="column-pricing">
+        <p class="pheader">6 MONTHS</p>
+        <p class="pprice">Want to be strapped down and locked in for 6 months like a Top G? Pick me.</p>
+    </div>
+  </div>
+  </div>
+</section>
 
 </body>
 
 <script>
+
+  let breakpoint = 474;
 
   //use onClick
   function showcontent1(input) {
@@ -60,6 +88,10 @@
     document.getElementById('pimage1').style.width='35vw';
     document.getElementById('p1').style.opacity='1';
     document.getElementById('p1').style.transition='opacity 4s';
+
+    if(document.documentElement.clientWidth < breakpoint) {
+      document.getElementById('service2').style.paddingTop='40px';
+    }
   }
 
   function showcontent2(input) {
@@ -71,7 +103,13 @@
     document.getElementById('pimage2').style.width='40vw';
     document.getElementById('p2').style.opacity='1';
     document.getElementById('p2').style.transition='opacity 4s';
-    document.getElementById('service3').style.paddingTop='40px';
+
+    if(document.documentElement.clientWidth > breakpoint) {
+      document.getElementById('service3').style.paddingTop='40px';
+    }
+    else {
+      document.getElementById('service3').style.paddingTop='60px';
+    }
   }
 
     function showcontent3(input) {
@@ -96,6 +134,8 @@
     document.getElementById('p4').style.opacity='1';
     document.getElementById('p4').style.transition='opacity 4s';
   }
+
+
 </script>
 
 </html>
