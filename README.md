@@ -42,4 +42,14 @@ Mainly using different hacks for CSS cosmetics and to make a roller to cover a w
 During the process I have also went through what it takes to do private hosting so have learnt the basics of nginx and to run it in one of my jails on FreeBSD
 and updated so the website runs on a local network.
 
+## LandingConnect
+This is the exercise in creating a landing page with a navbar, a video and some pricing plan options under freeCodeCamp.
 
+### What I learnt
+Gotten better to structure website with sections. I also put all necessary elements wanted in a header - in the header, and I had some fun playing with the display:flex; styling and using a lot of percent-based spacing - which naturals responsiveness. Did some puzzling to get the transform properties done in JS and to have the transform being applied correctly.
+
+Stable media queries and also made a conditional breakpoint for JS to change the habits depending on the viewport size.
+
+I also learnt on how some elements fixed widths or heights can make it so the body stops occupying 100 % of viewport in favor/strictness related to the fixed widths or heights of children.
+
+Overall the tidiest and most structured code so far.
