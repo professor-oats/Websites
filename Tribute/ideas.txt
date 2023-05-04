@@ -1,0 +1,2 @@
+Gör en bild med Bildt och gör något kul så att man kan trycka på en knapp för santa edition.
+Gör en till knapp man kan trycka på för något random.

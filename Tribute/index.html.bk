@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tribute to Carl Bildt</title>
+  <meta charset="UTF-8"> <!-- Gives edge error but I dunno -->
+  <meta name="author" content="professor_oats">
+  <meta name="keywords" content="tribute, carl bildt, known politic, sweden">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Verdana">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+  <base href="C:\Users\chron\Documents\Websites\Tribute\" target="_blank">
+  
+</head>
+<body>
+<main id="main">
+  <div id="div-border">
+  </div>
+  <h1 id="title">Minister of Foreign Affairs - The Carl Bildt of Sweden</h1>
+  <div id="img-div">
+    <img id="image-tree1" alt="christmas tree" src="./Pictures/tree1.jpg"></img>
+    <img id="image" alt="picture of bildt" src="./Pictures/bildt1.jpg"></img>    <!-- Originally bildt1.jpg-->
+
+	<!-- Guess all these could be added on fly through script but we do this for being plebs -->
+
+    <img class="image-layer" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+	<img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img class="image-layer2" alt="christmas bildt" src="./Pictures/santa2.png"></img>
+    <img id="image-tree2" alt="christmas tree" src="./Pictures/tree1.jpg"></img>
+  </div>
+    <p id="img-caption">Minister Carl Bildt has reigned over the political system in Sweden for over 40 years<p>
+    <div id="container-button" class="clearfix">
+      <button id="christmas-button" onClick="moreChristmas()" type="submit">Press for Christmas</button>
+    </div>
+  <div id="div-storytime">
+  <p id="tribute-info">The year was 2045. From the cold of the norths of Sweden, where Odin put his right eye to rest for eternal wisdom. In the same village, by the same water source, the Bildt family had their residence. They grew up in extreme poverty and had very little food to fight off the cold with. Every day the oldest in the Family - Carl, would go out to chop wood for their fireplace. He was the only one who seemed to never be phazed by the extreme colds. He always had this shimmering lust of life around him that all the others were drawn to, unceasingly.
+
+  </div>
+<p class="center">Press <a id="tribute-link" href="https://en.wikipedia.org/wiki/Carl_Bildt" target="_blank">here</a> for more info</p>
+</main>
+
+<script  type="text/javascript">
+
+  var counter = 0;
+  var i = 0;
+  var i2 = 0;
+  var i3 = 11;
+  var i4 = 21;
+  var i5 = 0;
+  
+  function myLoop1() {         //  create a loop function
+    setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+	  document.getElementsByClassName("image-layer")[i].style.opacity="1";
+      document.getElementsByClassName("image-layer")[i].classList.add('main-rotate');
+	  document.getElementsByClassName("image-layer")[i+1].style.opacity="1";
+      document.getElementsByClassName("image-layer")[i+1].classList.add('mirror-rotate'); //  your code here
+      i = i + 2;                    //  increment the counter
+      if (i <= 8) {           //  if the counter < 10, call the loop function
+        myLoop1();             //  ..  again which will trigger another 
+      }                       //  ..  setTimeout()
+    }, 1000)
+  }
+
+  function myLoop2() {         //  create a loop function
+    setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+	  document.getElementsByClassName("image-layer2")[i2].style.opacity="1";
+      document.getElementsByClassName("image-layer2")[i2].classList.add('super-mirror-rotate');
+      i2++;                   //  increment the counter
+      if (i2 <= 10) {           //  if the counter < 10, call the loop function
+        myLoop2();             //  ..  again which will trigger another 
+      }                       //  ..  setTimeout()
+    }, 150)
+  }
+
+  function myLoop3() {         //  create a loop function
+    setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+	  document.getElementsByClassName("image-layer2")[i3].style.opacity="1";
+      document.getElementsByClassName("image-layer2")[i3].classList.add('super-mirror-rotate');
+      i3++;                   //  increment the counter
+      if (i3 <= 20) {           //  if the counter < 10, call the loop function
+        myLoop3();             //  ..  again which will trigger another 
+      }                       //  ..  setTimeout()
+    }, 400)
+  }
+
+  function myLoop4() {         //  create a loop function
+    setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+	  document.getElementsByClassName("image-layer2")[i4].style.opacity="1";
+      document.getElementsByClassName("image-layer2")[i4].classList.add('super-mirror-rotate');
+      i4++;                   //  increment the counter
+      if (i4 <= 30) {           //  if the counter < 10, call the loop function
+        myLoop4();             //  ..  again which will trigger another 
+      }                       //  ..  setTimeout()
+    }, 800)
+  }
+
+  function myLoop5() {         //  create a loop function
+    setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+	  document.getElementsByClassName("image-layer2")[i5].style.opacity="1";
+      document.getElementsByClassName("image-layer2")[i5].classList.add('mega-mirror-rotate');
+      i5++;                   //  increment the counter
+      if (i5 <= 30) {           //  if the counter < 10, call the loop function
+        myLoop5();             //  ..  again which will trigger another 
+      }                       //  ..  setTimeout()
+    }, 150)
+  }
+
+  function moreChristmas() {
+    counter++;
+    document.getElementById("christmas-button").innerHTML="More Christmas";
+    switch(counter) {
+      case 1: 
+	document.getElementById("image").src="./Pictures/santa1.png";
+	break;
+      case 2:
+	document.getElementById("image").src="./Pictures/santa2.png";
+	break;
+      case 3:
+	document.getElementById("image-tree1").style.opacity="1";
+	break;
+      case 4:
+	document.getElementById("image-tree2").style.opacity="1";
+	break;
+	  case 5:
+   setTimeout(function(){
+		myLoop2();
+		myLoop3();
+		myLoop4();
+	}, 8000);
+   setTimeout(function(){
+		myLoop5();
+	}, 9000);
+    myLoop1();
+	break;
+    }
+
+}
+
+</script>
+
+</body>
+</html>

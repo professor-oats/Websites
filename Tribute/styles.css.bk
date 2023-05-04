@@ -1,0 +1,309 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100 %;
+}
+
+.center {
+  text-align: center;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+  
+.clearfix:after {
+  clear: both;
+}
+  
+.clearfix {
+  zoom: 1;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 3%;
+  font-size: 3vw;
+}
+
+#div-border {
+  background-image: url(Pictures/border1.jpg);
+  background-repeat: repeat-x;
+  margin: 0 auto;
+  margin-top: 3%;
+  height: 225px;
+  width: 100 %;
+  margin-bottom: 0%;
+}
+
+#img-div {
+  /* background-image: url(/Users/shoot/Websites/Tribute/Pictures/bildt1.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  /* text-align: center; */
+  height: 100%;    /* originally 100% */
+  margin-top: 0px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#img-caption {
+  color: black;
+  font-family: Verdana;
+  position: relative;
+  top: 0%;
+  text-align: center;
+}
+
+#image-tree1 {
+  opacity: 0;
+  height: 90%;
+  width: 25%;
+  overflow: auto;
+  z-index: -1;
+  display: inline-block;
+  margin: 0;
+  margin-left: 2%;
+  margin-right: 0%;
+  margin-top: 5%;
+}
+
+#image-tree2 {
+  opacity: 0;
+  height: 100%;
+  overflow: auto;
+  z-index: -1;
+  display: inline-block;
+  margin: 0;
+  margin-top: 5%;
+  margin-right: 2%;
+  height: 90%;
+  width: 25%;
+}
+
+#image {  /* move this to overlap properly */
+  opacity: 1;  /* dirty hack */
+  height: 100%;
+  overflow: auto;
+  z-index: -1;
+  max-width: 33%;
+  display: inline-block;
+  width: 33%;
+  margin 0;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2.4%;
+  text-align: center;    /* Unecessary assignment shit */
+}
+
+.image-layer {
+  opacity: 0;  /* dirty hack */
+  position: absolute;
+  height: 41vw;    /* based */
+  overflow: auto;
+  z-index: 1;
+  max-width: 33%;
+  display: inline-block;
+  width: 33%;
+  margin 0;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2.4%;
+  /* transform-origin: 50% 0%;  /* Check this */
+}
+
+.image-layer2 {
+  opacity: 0;  /* dirty hack */
+  position: absolute;
+  height: 41vw;    /* based */
+  overflow: auto;
+  z-index: 1;
+  max-width: 33%;
+  display: inline-block;
+  width: 33%;
+  margin 0;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2.4%;
+}
+
+#image2 {
+  opacity: 1;
+  heiht: 100%;
+  overflow: auto;
+  z-index: -2;
+  display: block;
+  margin-left: 33.5%;
+  margin-right: auto;
+  margin-top: -46.6%; 
+}
+
+#container-button {
+  height: 10%;
+  width: auto;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+#christmas-button {
+  max-width: 300px;
+  text-align: center;
+  font-weight: bold;
+  width: 70%;
+  margin: 0;
+  margin-bottom: 0%;
+  margin-top: 10%;
+  font-size: 48px;
+}
+
+#tribute-info {
+  display: block;
+  padding-top: 5%;
+  margin: 0 1.5em;
+
+}
+
+#tribute-link {
+  /*margin-left: 1.5em; */
+  /* text-align: center; */
+}
+
+/* Here goes the fancy rotation */
+
+.main-rotate {
+  animation-name: main-rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;    /* put a speedup here?*/
+  transform-origin: 0% 0%;
+
+}
+
+.mirror-rotate {
+  animation-name: mirror-rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;    /* put a speedup here?*/
+  transform-origin: bottom right;
+}
+
+.mirror-rotate2 {
+  animation-name: mirror-rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: bottom right;
+}
+
+.super-mirror-rotate {
+  animation-name: super-mirror-rotate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: bottom right;
+}
+
+.mega-mirror-rotate {
+  animation-name: mega-mirror-rotate;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: bottom right;
+}
+
+
+@keyframes main-rotate {
+   0% {
+     transform: rotate(0deg);
+   }
+   100% {
+     transform: rotate(360deg);
+   }
+}
+
+@keyframes mirror-rotate {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(-360deg)
+	}
+}
+
+@keyframes super-mirror-rotate {
+  0% {
+	transform: rotate(0deg);
+  }
+
+  12.5% {
+	right: 58%;
+  }
+
+  20% {
+	right: 60%
+  }
+
+  25% {
+	right: 68%;
+  }
+
+  50% {
+	right: 23%;
+  }
+
+  100% {
+	transform: rotate(-360deg);
+  }
+}
+
+@keyframes mega-mirror-rotate {
+  0% {
+	transform: rotate(0deg);
+  }
+
+  12.5% {
+	right: 58%;
+  }
+
+  20% {
+	right: 60%
+  }
+
+  25% {
+	right: 68%;
+  }
+
+  50% {
+	right: 23%;
+  }
+
+  100% {
+	transform: rotate(-360deg);
+  }
+}
+
+@media screen and (min-width: 415px){
+  #christmas-button {
+    margin-top: 2%;
+  }
+
+  #tribute-info {
+    padding-top: 3%;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  #christmas-button {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,19 @@
+2023-03-24
+
+New log here getting back to the project of the Tribute page of freeCodeCamp.
+The old log is, I don't care at this point. The process is simply anyway.
+
+Have done the whole structure and site so it will go pass through the tests.
+Now we just have to do some fun and relaxing shenanigans to add flavor.
+Go go go. Rotation.
+
+ROTATION
+To make the rotation of Bildt we want to add a layered picture so we will have like 8 or something.
+Then we animate it to rotate through an axis and just to spin out when pressed on
+"more christmas" too many times. Pog.
+
+Have the number of pictures elements layered already with height 0 and then script to give them
+100 %? Use the same overlap as I have done when adding beard and santa hat.
+
+Position absolute for the layers?
+Yas.
