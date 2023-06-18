@@ -1,0 +1,324 @@
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+</head>
+<body>
+  <nav id="navbar">
+      <header>Make an easy Weebsite</header>
+      <ul>
+        <li><a class="nav-link" href="#introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#basics">Quick on the basics</a></li>
+        <li><a class="nav-link" href="#makingof">Making of main-section elements and headers</a></li>
+        <li><a class="nav-link" href="#pcl">Paragraphs, classes/id:s, codes and list items</a></li>
+        <li><a class="nav-link" href="#creationnavbar">Creation and positioning of navbar</a></li>
+        <li><a class="nav-link" href="#linkingandids">Fix linking and id:s</a></li>
+        <li><a class="nav-link" href="#stylize">Start to stylize your content </a></li>
+        <li><a class="nav-link" href="#mediaqueries">About media queries</a></li>
+        <li><a class="nav-link" href="#sumup">Summing up</a></li>
+      </ul>
+    </nav>
+  <main id="main-doc">
+    <section class="main-section"id="introduction">
+      <header>Introduction</header>
+      <p>Welcome to the guide of creating this and weebsites of likes. The goal of this guide is to give you an understanding of the simplest layouts of weebsite making and how to make your own guide on how to make a weebsite.</p>
+    </section>
+    <section class="main-section" id="basics">
+      <header>Quick on the basics</header>
+      <p>It helps, for you reading this, to have a general understanding of HTML (hypertext markup language) but here comes a quick presentation on the basics.</p>
+      <p>The means of a markup language is so a reader (program/app) can know in what way to present or process the data fed to its input.</p>
+<p>To fullfill this you use short words (marks) enclosed in < > to tell the program on how content (media, text, data, link) will be processed, presented and viewed.<br></br> First example: </p><pre><code>< p style="color:lime;background-color:black;font-size:18px;" >Your text here< /p ></code></pre><br></br>
+
+<p>In this way we use the paragraph mark 'p' above to specify that we want to display textual content and then inside the gaps we put a 'style' attribute to change the style of the text.</p>
+
+<p>Usually another method is used when stylizing elements on a weebsite. The most common method is to store the commands in a separate file with a .css extension and then linking it to the .html in the < head >. Shown below. </p>
+
+<p>Let us look at the common outline for a weebsite consisting of the usual markups:</p><pre><code>< html lang="en" >
+< head >
+  < link rel="stylesheet" href="styles.css" >
+  < meta charset="UTF-8" >
+< /head >
+< body >
+  < div >
+  < /div >
+  < div >
+  < /div >
+< /body >
+< /html ></code></pre><br></br>
+
+<p>That's it in its simplest layout. As you may have noticed there are a lot of blanks and when you code yourself you skip between the letters and the < >. So when writing you start the marking by having and opening < html > and then you start making a tree layout finishing each mark with its closing counterpart < /html >.</p>
+
+<p>Within each div element there are often added a lot others as well and at times you instead use a structure like < main > < section > < /section > < section > < /section > < /main > and inside those you put common elements like < p > for text, < header > or < h1 >, < h2 > for headers and < img > for images. </p>
+
+<p>Yes, it is some structure and a lot of tricks to get hold of so we will make sure to at least give you a knowabout and then you can follow up your learning on w3schools.com or freecodecamp.org.</p>
+
+<p>One more important mention is that elements are divided into parent and children groups, where children follows or are spanned/divided inside the parents. All elements inside the opening < tag > and the enclosing < /tag > are accounted as children of such: </p>
+<pre><code>< parentelement > - Parent of childelement
+  < childelement > - Parent of childofchildelement
+    < childofchildelement > 
+    < /childofchildelement >
+  < /childelement >
+< /parentelement >
+</code></pre>
+</section>
+
+    <section class="main-section" id="makingof">
+      <header>Making of main-section elements and headers</header>
+      <p>Now we will look into making the main sections and headers of this site. We will be following the skeleton we showed in the chapter before and add to that:</p><pre><code>< html lang="en" >
+< head >
+  < link rel="stylesheet" href="styles.css" >
+  < meta charset="UTF-8" >
+< /head >
+< body >
+  < main id="main-doc" >
+  < section class="main-section" id="introduction" >
+    < header >Introduction< /header >
+      < p >Text< /p >
+    < /header >
+  < /section >
+  < section class="main-section" id="basics" >
+    < header >Quick on the basics < /header >
+      < p >Text< /p >
+  < /section >
+  < / main >
+< /body >
+< /html ></code></pre><br></br>
+
+  <p> As you can see we are opting for using < section > instead of < div >, this is mainly in line of the update to the HTML5 standard for declaring content/text with clear related content: part of newspage, chapters in manuals, sections of tutorials etc.
+  We could as well be using < div > < / div > instead but one good reminder is to use HTML5 since it helps optimise for search engines. More on sections: <a href="https://www.w3docs.com/snippets/html/what-is-the-difference-between-section-and-div-elements.html">here</a> </p>
+  <p> So we took the skeleton we have and put in a < main > element as well as 2 sections each with header and paragraph elements. We also added an id to main with the name "main-doc" and a class for each section. This is so we can style them later on addressing their class and/or id.
+
+</section>
+<section class="main-section" id="pcl">
+      <header>Paragraphs, classes/id:s, codes and list items</header>
+      <p> Now you know what a section means and in this section we will be going through two very common things - paragraphs and list items, and that which is related to our tutorial: < code >. </p>
+      <p> When creating textual content online perhaps the most common way to present text is as a simple paragraph < p > < /p >. Like most other elements < p > can be added to have a class, simply put class="MyClass" after the p within the gaps to have a class named MyClass. This can later be used when wanting to have a certain color, position or style. </p>
+      <p> We have discussed both class= and id= and the main difference between the two are that any element can be added to the same class but id is specific and only works for one element at a time. Often or at times you can have an element you will like to address with things like "text-align: center" and "margin: 0; padding:0" and at times it can be great to put those features in a class to center the elements of such class horizontally and erase the margin and padding. <br></br>
+
+That's about it for the classes and id for now. Next is the creation of lists and list items. The great things about lists are that they can be used to arrange elements/objects in an ordered or unordered arrangement and it's useful when creating navigation menus with multiple selections in a, for example, rolldown list. <br></br>
+
+Here's a common unordered list:
+</p><pre><code>< ul >
+    < li >Apple< /li >
+    < li >Banana< /li >
+    < li >Arbitrary fruit< /li >
+  < /ul >
+</code></pre><br></br>
+
+<p> That consists of three list elements. By default this creates a list where the elements are marked with bullets. This can be changed by specifying for example style="list-style-type:disc;" within < ul > like this: </p>
+<pre><code>< ul style="list-style-type:disc;" >
+    < li >item< /li >
+    < li >anotheritem< /li >
+    < li >anotheranotheritem< /li >
+  < /ul >
+</code></pre><br></br>
+<p>Using unordered list with style="list-style-type:none;" is common in lists in mentioned navigation menus. More on unordered lists can be found on <a href="https://www.w3schools.com/html/html_lists_unordered.asp">w3schools.com</a></p>
+    </section>
+    <section class="main-section" id="creationnavbar">
+      <header>Creation and positioning of navbar</header>
+      <p>Now when we know how to do unordered lists the creation and positioning of navbar will come very naturally. To semi-quote W3schools on the topic a navbar is essentially and viewed as a list of links, so making it an unordered list makes a lot of sense. And to precisize and specify the styling of it we can also give it its own ID "navbar". At some sites we make both a navbar on the top and also another one by the side, eg. the left, and remember to give them separate and well-named IDs.</p>
+<pre><code>< nav id="navbar" >
+      < header >Make an easy Weebsite< /header >
+      < ul >
+        < li >< a class="nav-link" href="#introduction" >Introduction< /a >< /li >
+        < li >< a class="nav-link" href="#basics" >Quick on the basics< /a >< /li >
+        < li >< a class="nav-link" href="#makingof" >Making of main-section elements and headers< /a >< /li >
+      < /ul >
+</code></pre><br></br>
+<p>Again, one whitespace is added at the beginning and ending of the gaps < >, when coding this is omitted. As you may figure this is a strip of the navbar for this page as the theme suggests and the list elements consists of links that has their corresponding reference to the id:s of this specific page: #introduction, #basics, #makingof. </p>
+<p>This makes it so when you follow the link you will be guided to the part of this manual that corresponds to the ID. Try navigate yourself if you have yet to try it.</p>
+<p>The styling of the list will depend on whether it will sit on top or be on the side. Many times we use either absolute positioning or fixed positioning to have it put in its place. For this site we use "position:fixed;" which ensures that the navbar is always present even when scrolling the manual.</p>
+<p> In this part I will opt away from showing the CSS code for the #navbar and instead teach a very great trick of inspecting content of a weebsite. To find the styling of navbar I encourage to use the "View page source" command in your browser. There you will find the HTML for the page and at the top you will find the file named styles.css, click there and navigate your way to see the full styling of the elements.</p>
+
+</section>
+<section class="main-section" id="linkingandids">
+  <header>Fix linking and id:s </header>
+  <p> Let's talk one more time about the linking and id:s that we have just created. The links are made within the < a > < / a > tags and it links to a part of the page with "href=". Inside "href=" we can put any place we like to link to that responds to what we type, e.g. we can put a common URL like www.google.com or link to another page that we have written ourselves or link to the same page through the element id:s. Essentially "href" reads as "hypertext reference" and act as such. It's of importance that when linking to the elements of this site that the id:s are correct in the reference.</p>
+
+</section>
+<section class="main-section" id="stylize">
+  <header>Start to stylize your content </header>
+  <p>When you have the idea and the skeleton set for the HTML you want to display you also want to style it so it suits good purpose. We made an example very early in how to give an element a style on the fly and there are three methods in where to choose.</p>
+  <p>First one is the mentioned in-line style where you put the styling command inside of the element's HTML tag.</p>
+  <p> Second one is to have its own HTML tag: < style >< /style > which is put inside the < head > < /head > tag on top of the skeleton. It differs from the in-line method and looks like this:</p>
+<pre><code>< head >
+  < style >
+    p {
+      color: lime;
+      background-color: black;
+      font-size: 18px;
+    }
+  < /style >
+< /head >
+</code></pre><br></br>
+<p> As you will notice this is the exact styling as given in our first example of this tutorial but in second styling form. Every element is taken and then { } encapsulates the style attributes given for the element in front. To give multiple elements the same style you simply delimit them with ',' and for elements that are part of other element (the child of parent) you use whitespace as delimiter. E.g:</p>
+
+<pre><code>< head >
+  < style >
+    p, a {
+      color: lime;
+      background-color: black;
+      font-size: 18px;
+    }
+  < /style >
+< /head >
+</code></pre><br></br>
+
+<pre><code>< head >
+  < style >
+    p a {
+      color: lime;
+      background-color: black;
+      font-size: 18px;
+    }
+  < /style >
+< /head >
+</code></pre><br></br>
+<p>Notice the difference? First is giving styling attributes to both paragraph and link elements. Second is giving styling attributes only to the link elements that are children of paragraph elements.</p>
+
+<p>The third and also most common practice, slightly arguably the best, is to put all the styling attributes inside their own file. The file extension used is .css and is a direct abbreviation for its full name Cascading Style Sheets. To decide what or which .css files to be used the developer has to reference them within < head > < /head >of the HTML document, like this:</p>
+<pre><code>< head >
+  < link rel="stylesheet" href="styles.css" >
+  < meta charset="UTF-8" >
+< /head >
+</code></pre><br></br>
+<p> The file name is of own choice and here we use "styles.css".</p>
+<p> The syntax of the .css file is as follows: </p>
+<pre><code>#navbar header {
+  font-size: 32px;
+  padding: 2%;
+  color: yellow;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: red;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+#navbar li {
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  font-size: 24px;
+  padding: 2%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  text-decoration: none;
+  cursor: pointer;
+  color: yellow;
+}
+
+#navbar a:hover {
+  background-color: blue;
+}
+</code></pre><br></br>
+
+<p> This is the full stylizing of all the elements related to the id navbar. To reference id in CSS you use #idname and to reference classes you use .classname, as such: </p>
+<pre><code>.example {
+  margin-bottom: -2%;
+  white-space: pre-wrap;
+}
+</code></pre><br></br>
+
+<p>These are the three methods on how to stylize HTML elements and generally there is freedom in their usage, they can all be used as long as we respect the rules of precedence:</p>
+  <pre><ol>
+    <li class="example">A style attribute marked !important</li>
+    <li class="example">In-line styling</li>
+    <li class="example">Styling attribute with higher specificity, e.g:
+
+ID - Class - Elements
+    </li>
+    </ol></pre>
+<p> In-line styling will always have precedence over the other methods of styling without !important mark simply because the last declared is applied.</p> 
+  
+<p>The specificity ID - Class - Elements is valid for each of and within the method of choice:</p> 
+
+<p>In-line style attribute of lower specificity still has priority over CSS with higher specificity, since CSS is declared before any in-line styling in the HTML document.</p> 
+
+</section>
+<section class="main-section" id="mediaqueries">
+  <header>About media queries </header>
+  <p>This is the last part of the tutorial and may at the same time be one of the more important knowledge to have. Media query is a technique to access data from the device or app that is used when accessing the webpage. </p><br></br>
+  <p>Examples of data can include:</p>
+  <pre><ul>
+     <p>*** List from W3schools ***</p>
+    <li class="example">width and height of the viewport</li>
+    <li class="example">width and height of the device</li>
+    <li class="example">orientation (is the tablet/phone in landscape or portrait mode?)</li>
+    <li class="example">resolution</li>
+<ul>
+
+</pre>
+<p>More examples: <a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/">here</a></p><br></br>
+<p>This information is then used to make a test for when a condition is true and make a CSS block ({ }), it applies styling of elements in the same way as the other blocks but only when the condition is met:</p>
+<pre><code>@media screen and (max-width: 869px){
+  #navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border: none;
+  }
+
+  #navbar header {
+    text-align: center;
+    padding: 4%;
+    font-size: 40px;
+  }
+
+  #navbar ul {
+    height: 270px;
+  }
+
+  #navbar a {
+    text-align: center;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-top: 270px;
+  }
+
+  section {
+    margin-left: 0px;
+  }
+
+}	
+</code></pre><br></br>
+
+<p>@media screen queries that we have a viewport to output the data to and and is the logical and-operator to check that, in this case, its max-width is 869px. </p>
+
+<p>Using any viewport lower than or equal to max-width 869px will override any styling attributes that are declared before this, hence cascading. </p>
+
+<p>The overall result, gain and use of this is to let the presentation of webpages be changed in favor to what device the user currently uses or how big the viewport of the browser window may be. So that every webpage can be viewed in a sought for manner for every device.</p>
+
+<p>Test this simply by taking the styling of the navbar in the forementioned chapter and let the media query follow afterwards inside the .css file, respecting the cascade, and witness how the presentation of it changes when the viewport passes the threshold of a max-width 896px.</p>
+
+</section>
+<section class="main-section" id="sumup">
+  <header>Summing up </header>
+  <p>Done. With this tutorial in hand and together with a personal interest and a quick look on some other references like W3schools and CSS-tricks you will be able to write your own weebsite.</p>
+  <p>The more you practice the better you become, as with anything, and you will learn what works for you and what does not. Every person has its own coding style.</p>
+  <p>The example codes in each chapter is either exact copy or close to the code that presents this tutorial itself which has the intent of helping a developer to replicate it.</p>
+  <p>Happy coding.</p>
+</section>
+</main>
+</body>
+</html>

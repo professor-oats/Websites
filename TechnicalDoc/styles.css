@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  box-sizing: none;
+  color: lime;
+  background-color: black;
+}
+
+body {
+  min-width: 290px;
+  padding-right: 2%;
+}
+
+pre {
+  overflow: auto;
+  background-color: gray;
+}
+
+section header {
+  font-size: 32px;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  color: yellow;
+}
+
+#navbar header {
+  font-size: 32px;
+  padding: 2%;
+  color: yellow;
+  margin-left: 5%;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: red;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+#navbar li {
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  font-size: 24px;
+  padding: 2%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  text-decoration: none;
+  cursor: pointer;
+  color: yellow;
+}
+
+#navbar a:hover {
+  background-color: blue;
+}
+
+section {
+  margin-left: 310px;
+  padding: 20px;
+}
+
+section p, pre {
+  font-size: 1.3rem;
+  margin-left: 3%;
+  margin-bottom: 3%;
+  font-family: monospace;
+}
+
+section code ul {
+  list-style-type: none;
+}
+
+section code {
+  background-color: gray;
+  color: yellow;
+  display: block;
+  padding: 3%;
+
+}
+
+.example {
+  margin-bottom: -2%;
+  white-space: pre-wrap;
+}
+
+@media screen and (max-width: 869px){
+  #navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border: none;
+  }
+
+  #navbar header {
+    text-align: center;
+    padding: 4%;
+    font-size: 40px;
+    margin-left: 4%;
+  }
+
+  #navbar ul {
+    height: 200px;
+    overflow: auto;
+  }
+
+  #navbar a {
+    text-align: center;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-top: 270px;
+  }
+
+  section {
+    margin-left: 0px;
+  }
+
+}	
