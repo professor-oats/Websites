@@ -53,3 +53,19 @@ Stable media queries and also made a conditional breakpoint for JS to change the
 I also learnt on how some elements fixed widths or heights can make it so the body stops occupying 100 % of viewport in favor/strictness related to the fixed widths or heights of children.
 
 Overall the tidiest and most structured code so far.
+
+## Tribute
+This is the local version of the ffc exercise to make a tribute page. I used my sublime humour as always to do something less serious.
+For this assignment I wanted to practice animating pictures and experimenting with them overlapping with different animations and change it mid run.
+Worked out some great solutions.
+
+It was little tricky getting the delays working properly for the animation and I had some tinkering to do the flex proper to fit the images to the grid.
+
+For the long run I'd like to add some snow, and/or atleast colorswitches/inverting and also add some music to it. For the short term this is proper enough.
+
+### What I learnt
+Practicing animations of images with keyframes. I made good use of opacity 0 -> 1 to show the pictures overlapping
+through the Javascript. Made a simple delay function and did 4 different animation running.
+
+Got the idea that instead of buffering all the images from the start we could be more clean and add them with scripts
+but for simplicity it works well in this case.
