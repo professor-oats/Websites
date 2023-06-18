@@ -77,5 +77,5 @@ This is an instructional website in how to easily make your own website with HTM
 ### What I learnt
 First instructional guide written, ever, so it was a nice experience in putting effort providing structure and basic knowledge for others.
 Thankfully this made me repeat some knowledge of basic HTML/CSS and I followed the assignment in using sections HTML5 accordingly.
-I practiced different ways of showing text within <pre><code></code></pre> tags and got to know the good uses of overflow:.
+I practiced different ways of showing text within < pre >< code >< /code >< /pre > tags and got to know the good uses of overflow:.
 Very straightforward and clean experience.
