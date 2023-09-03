@@ -35,7 +35,8 @@ I started to learn about the importance of A11y and to keep websites 'clean code
 
 
 ## Platanas
-This is the current setup I use for testing purposes and it's a version of a form exercise on freeCodeCamp.
+This is the first website made as a part of the Responsive Web Design courses on FCC. It is supposed to be a simple form without any other functions than pure cosmetics.
+Useful as a starting point for registering of membership.
 
 ### What I learnt
 Mainly using different hacks for CSS cosmetics and to make a roller to cover a website as well as switching background images on different conditions.
@@ -43,7 +44,7 @@ During the process I have also went through what it takes to do private hosting 
 and updated so the website runs on a local network.
 
 ## LandingConnect
-This is the exercise in creating a landing page with a navbar, a video and some pricing plan options under freeCodeCamp.
+This is the exercise in creating a landing page with a navbar, a video and some pricing plan options under FCC Responsive Web Design.
 
 ### What I learnt
 Gotten better to structure website with sections. I also put all necessary elements wanted in a header - in the header, and I had some fun playing with the display:flex; styling and using a lot of percent-based spacing - which naturals responsiveness. Did some puzzling to get the transform properties done in JS and to have the transform being applied correctly.
@@ -69,3 +70,12 @@ through the Javascript. Made a simple delay function and did 4 different animati
 
 Got the idea that instead of buffering all the images from the start we could be more clean and add them with scripts
 but for simplicity it works well in this case.
+
+##TechnicalDoc
+This is an instructional website in how to easily make your own website with HTML/CSS. I focused on having it clean and simple and it has a very neat and retro style over it.
+
+### What I learnt
+First instructional guide written, ever, so it was a nice experience in putting effort providing structure and basic knowledge for others.
+Thankfully this made me repeat some knowledge of basic HTML/CSS and I followed the assignment in using sections HTML5 accordingly.
+I practiced different ways of showing text within < pre >< code >< /code >< /pre > tags and got to know the good uses of overflow:.
+Very straightforward and clean experience.
