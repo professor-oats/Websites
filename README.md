@@ -79,3 +79,10 @@ First instructional guide written, ever, so it was a nice experience in putting 
 Thankfully this made me repeat some knowledge of basic HTML/CSS and I followed the assignment in using sections HTML5 accordingly.
 I practiced different ways of showing text within < pre >< code >< /code >< /pre > tags and got to know the good uses of overflow:.
 Very straightforward and clean experience.
+
+## SimpleZombie
+Just a simple splash page to use for the funz
+
+### What I learnt
+Played around with new usage of doing linear gradients to form a kind of brickwall effect.
+Set the foundation for doing animation switching the color over the text.
