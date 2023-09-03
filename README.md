@@ -71,7 +71,7 @@ through the Javascript. Made a simple delay function and did 4 different animati
 Got the idea that instead of buffering all the images from the start we could be more clean and add them with scripts
 but for simplicity it works well in this case.
 
-##TechnicalDoc
+## TechnicalDoc
 This is an instructional website in how to easily make your own website with HTML/CSS. I focused on having it clean and simple and it has a very neat and retro style over it.
 
 ### What I learnt
