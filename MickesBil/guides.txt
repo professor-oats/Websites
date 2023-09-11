@@ -1,0 +1,1 @@
+https://www.theamplituhedron.com/articles/How-to-animate-GIFs-in-canvas-as-sprite-sheets-in-JS/
