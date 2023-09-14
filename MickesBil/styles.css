@@ -2,8 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: none;
+}
+
+body {
   background-image: url("./circuit5.png");
-  /*Check if we want it pitch black or no */
+}
+
+@font-face {
+    font-family: pixelfont;
+    src: url('./fonts/PixelEmulator-xq08.ttf');
+}
+
+.center {
+  text-align: center;
 }
 
 #header {
@@ -15,8 +26,7 @@
   display: block;
   text-align: left;
   color: white;
-  font-size: 3.2em;
-  background-image: none;
+  font-size: 5.2em;
   background: linear-gradient(
 					127deg,
 					red 0%, orange 25%, #3e3947 75%, #3e3947 100%
@@ -36,21 +46,19 @@
 #nav-bar {
   position: relative;
   display: block;
-  background-image: none;
   /* background-color: black;    /* rgb(15, 15, 97); */
 
   font-size: 28px;
   text-align: left;
-  margin-bottom: -20px;
+  margin-bottom: -23px;
 }
 
 #nav-bar a {
-  background-image: none;
   padding-left: 3%;
   padding-right: 3%;
   padding-bottom: 0.7%;
   padding-top: 0.7%;
-  background-color: red;
+  /* background-color: red; */
   text-decoration: none;
   color: white;
   border-radius: 8px 8px 0px 0px;
@@ -60,9 +68,37 @@
   cursor: pointer;
 }
 
+#nav-bar a:active {
+  background-color: #3e3947;
+}
+
+#startsida {
+  background-color: #3e3947;
+  border-style: outset;
+  border-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 12px;
+  border-left-color: #4e485a;
+  border-top-width: 5px;
+}
+
+#annonser {
+  background-color: red;
+}
+
+#hett {
+  background-color: red;
+}
+#kontakt {
+  background-color: red;
+}
+
+#spela {
+  background-color: red;
+}
+
 #wrapper {
-  height: 100vh;
-  background-image: none;
+  /* height: 100vh; */
   background-color: rgb(62, 57, 71);    /* #3e3947 */
   margin-left: 2%;
   margin-right: 2%;
@@ -75,4 +111,39 @@
   border-bottom-color: #655d73;
   border-radius: 8px;
   margin-top: -0.8%;
+}
+
+#valkom {
+  position: relative;
+  font-size: 6em;
+  color: orange;
+  padding-right: 2%;    /* Minor visual adjust */
+  padding-top: 3%;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+
+  margin-bottom: 2%;
+}
+
+p {
+  font-size: 1.8em;
+  color: white;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+
+  margin-left: 3%;
+  margin-right: 2%;
+  letter-spacing: 1px;
+  font-family: monospace;
+}
+
+#sign {
+  color: orange;
+}
+
+#img-fire {
+  position: relative;
+  z-index: 1;
+  margin-left: 23%;
+  width: 50%;
 }

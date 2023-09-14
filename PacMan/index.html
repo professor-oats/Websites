@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Pac-Man</title>
+    <style>
+        #gameCanvas {
+            box-shadow: 10px 10px 20px black;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Comic Sans MS';
+            color: lightgrey;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            height: 100vh;
+            background: linear-gradient(
+                0deg,
+                rgb(17, 51,161) 0%,
+                rgb(136, 34, 195) 100%
+            );
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Pac-Man</h1>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <script id="GameLoop">
+
+        const MovingDirection = {    /* const declaration is relatively new */
+            up: 0,
+            down: 1,
+            left: 2,
+            right: 3
+        }
+
+       /*
+        class MovingDirection {    /* alternative getter usage for declaring constants
+            static get up() {
+                return 0;
+            }
+            static get down() {
+                return 1;
+            }
+            static get left() {
+                return 2;
+            }
+            static get right() {
+                return 3;
+            }
+        }
+        */
+
+        class PacMan {
+            constructor(x, y, tileSize, velocity, tileMap) {
+                this.x = x;
+                this.y = y;
+                this.tileSize = tileSize;
+                this.velocity = velocity;
+                this.tileMap = tileMap;
+
+                this.currentMovingDirection = null;
+                this.requestedMovingDirection = null;
+
+                document.addEventListener("keydown", this.#keydown);
+
+                this.#loadPacmanImages();
+            }
+
+            draw(ctx) {
+
+                this.#move();
+
+                ctx.drawImage(
+                    this.pacmanImages[this.pacmanImageIndex],
+                    this.x,
+                    this.y,
+                    this.tileSize,
+                    this.tileSize
+                );
+            }
+
+            #loadPacmanImages() {
+                const pacmanImage1 = new Image();
+                pacmanImage1.src = './images/pac0.png';
+
+                const pacmanImage2 = new Image();
+                pacmanImage2.src = './images/pac1.png';
+
+                const pacmanImage3 = new Image();
+                pacmanImage3.src = './images/pac2.png';
+
+                const pacmanImage4 = new Image();
+                pacmanImage4.src = './images/pac1.png';
+
+                this.pacmanImages = [
+                    pacmanImage1,
+                    pacmanImage2,
+                    pacmanImage3,
+                    pacmanImage4
+                ];
+
+                this.pacmanImageIndex = 0;
+            }
+
+            #keydown = (event) => {    /* Using an arrow function here makes it so this. is herited through
+                the PacMan class instead of having its own this when checking current and requested moving direction */
+
+                /* Mozilla Dev:
+                Arrow functions don't have their own bindings to this, arguments, or super, and should not be used as methods.
+                */
+
+                //up
+                if (event.keyCode == 38) {
+                    if (this.currentMovingDirection == MovingDirection.down) {
+                        this.currentMovingDirection = MovingDirection.up;
+                    }
+                    this.requestedMovingDirection = MovingDirection.up;
+                    console.log(38);
+
+                }
+                //down
+                if (event.keyCode == 40) {
+                    if (this.currentMovingDirection == MovingDirection.up) {
+                        this.currentMovingDirection = MovingDirection.down;
+                    }
+                    this.requestedMovingDirection = MovingDirection.down;
+                    console.log(40);
+
+                }
+                //left
+                if (event.keyCode == 37) {
+                    if (this.currentMovingDirection == MovingDirection.right) {
+                        this.currentMovingDirection = MovingDirection.left;
+                    }
+                    this.requestedMovingDirection = MovingDirection.left;
+
+                }
+                //right
+                if (event.keyCode == 39) {
+                    if (this.currentMovingDirection == MovingDirection.left) {
+                        this.currentMovingDirection = MovingDirection.right;
+                    }
+                    this.requestedMovingDirection = MovingDirection.right;
+
+                }
+
+            }
+
+            #move() {
+                if (this.currentMovingDirection !== this.requestedMovingDirection) {
+                    if (Number.isInteger(this.x / this.tileSize) &&
+                        Number.isInteger(this.y / this.tileSize)) {
+                        this.currentMovingDirection = this.requestedMovingDirection;
+                        }
+                }
+
+                switch (this.currentMovingDirection) {
+                    case MovingDirection.up:
+                        this.y -= this.velocity;   /* "up" in browser is negative since y coordinate increments downwards */
+                        break;
+                    case MovingDirection.down:
+                        this.y += this.velocity;
+                        break;
+                }
+
+            }
+
+        }
+
+        class TileMap {
+            constructor(tileSize) {
+                this.tileSize = tileSize;
+
+                this.yellowDot = new Image()
+                this.yellowDot.src = './images/yellowdot.png';
+
+                this.wall = new Image()
+                this.wall.src = './images/wall.png';
+            }
+
+            /* 1 - wall
+                0 - dots
+                4 - Pac-Man
+            */
+
+            map = [
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 1],
+                [1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1],
+                [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1],
+                [1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1],
+                [1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1],
+                [1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1],
+                [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+                [1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1],
+                [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+            ];
+
+            draw(ctx) {
+                /* Make a loop over the map */
+                for (let row = 0; row < this.map.length; row++) {
+                    for (let column = 0; column < this.map[row].length; column++) {
+                        /* get tile, each cell in array is a tile */
+                        let tile = this.map[row][column];
+                        if (tile === 1) {
+                            this.#drawWall(ctx, column, row, this.tileSize);
+                        }
+                        else if (tile === 0) {
+                            this.#drawDot(ctx, column, row, this.tileSize);
+                        }
+
+                        /* Uncomment to show map grid */
+                        /*
+                        ctx.strokeStyle = "yellow";
+                        ctx.strokeRect(
+                            column * this.tileSize,
+                            row * this.tileSize,
+                            this.tileSize,
+                            this.tileSize
+                        );
+                        */
+                    }
+                }
+
+            }
+
+            #drawDot(ctx, column, row, size) {
+                ctx.drawImage(
+                    this.yellowDot,
+                    column * this.tileSize,
+                    row * this.tileSize,
+                    size,
+                    size
+                );
+            }
+
+            #drawWall(ctx, column, row, size) {
+                ctx.drawImage(
+                    this.wall,
+                    column * this.tileSize,
+                    row * this.tileSize,
+                    size,
+                    size
+                );
+            }
+
+            setCanvasSize(canvas) {
+                canvas.width = this.map[0].length * this.tileSize;
+                canvas.height = this.map.length * this.tileSize;
+            }
+
+            getPacMan(velocity) {
+                for (let row = 0; row < this.map.length; row++) {
+                    for (let column = 0; column < this.map[row].length; column++) {
+                        let tile = this.map[row][column];
+                        if (tile === 4) {
+                            this.map[row][column] = 0;
+                            return new PacMan(
+                                column * this.tileSize,
+                                row * this.tileSize,
+                                this.tileSize,
+                                velocity,
+                                this
+                            );
+                        }
+                    }
+                }
+            }
+        }
+
+        const tileSize = 32;
+        const velocity = 1;    /* Will move one step each time the game loop updates */
+
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const tileMap = new TileMap(tileSize);
+        const pacman = tileMap.getPacMan(velocity);
+        /* getPacMan will return a new object of the PacMan class with the set velocity and position */
+
+        function gameLoop() {    // most important part of our application
+            tileMap.draw(ctx);
+            pacman.draw(ctx);
+        }
+
+        tileMap.setCanvasSize(canvas);
+        setInterval(gameLoop, 1000 / 75);    // calling gameLoop 75 times every 1000 ms, redraw screen
+    </script>
+
+</body>
+</html>
