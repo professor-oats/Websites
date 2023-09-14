@@ -86,3 +86,15 @@ Just a simple splash page to use for the funz
 ### What I learnt
 Played around with new usage of doing linear gradients to form a kind of brickwall effect.
 Set the foundation for doing animation switching the color over the text.
+
+## PacMan
+PacMan is a Javascript app that uses the canvas to create a simple PacMan game. This is a part of following a tutorial by Coding With Adam on YouTube.
+Usage of this can be either standalone or be applied as is as script to any website.
+
+### What I learnt
+I refined some knowledge about game programming and started to get in first contact with having a gameloop and making plots/draws on canvas through it.
+The knowledge gained will be very helpful with other active rendering projects where a gameloop will be implemented as well.
+Got more knowledge about creating constants in Javascript and some good uses of lambda functions.
+Learnt about how to make private functions to a class using '#'.
+
+Futhermore knowledge in how to arrange and regard tiles on the canvas.
