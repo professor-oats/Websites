@@ -13,6 +13,18 @@
             font-family: 'Comic Sans MS';
             color: lightgrey;
         }
+        p {
+            text-align:center;
+            font-family: 'Comic Sans MS';
+            color: lightgrey;
+            font-size: 22px;
+            padding-top: 2%;
+        }
+
+        #replay {
+            display: none;
+        }
+
         body {
             display: flex;
             justify-content: center;
@@ -31,6 +43,7 @@
     <div>
         <h1>Pac-Man</h1>
         <canvas id="gameCanvas"></canvas>
+        <p id="replay">Press 'Space' to play again</p>
     </div>
     <script id="GameLoop">
 
@@ -227,6 +240,7 @@
                 this.eatGhostSound = new Audio('./sounds/eat_ghost.wav');
 
                 this.madeFirstMove = false;
+                this.pacmanReset = false;
 
                 document.addEventListener("keydown", this.#keydown);
 
@@ -342,6 +356,10 @@
 
                 }
 
+                if (event.keyCode == 32) {
+                    this.pacmanReset = true;
+                }
+
             }
 
             #move() {
@@ -416,7 +434,7 @@
             }
 
             #eatDot() {
-                if (this.tileMap.eatDot(this.x, this.y) && this.MadeFirstMove) {
+                if (this.tileMap.eatDot(this.x, this.y) && this.madeFirstMove) {
                     this.wakaSound.play();    //play sound
                 }
             }
@@ -485,14 +503,28 @@
                 7 - power dot
             */
 
+            originmap = [
+                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    [1, 7, 0, 0, 4, 0, 0, 0, 0, 0, 0, 7, 1],
+                    [1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1],
+                    [1, 0, 1, 6, 0, 0, 0, 0, 0, 0, 1, 6, 1],
+                    [1, 6, 1, 7, 1, 1, 1, 0, 1, 0, 1, 0, 1],
+                    [1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1],
+                    [1, 0, 1, 0, 1, 0, 6, 0, 1, 0, 1, 0, 1],
+                    [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+                    [1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1],
+                    [1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 1],
+                    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+                ];
+
             map = [
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
                 [1, 7, 0, 0, 4, 0, 0, 0, 0, 0, 0, 7, 1],
                 [1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1],
-                [1, 0, 1, 6, 0, 0, 0, 0, 0, 0, 1, 0, 1],
-                [1, 0, 1, 7, 1, 1, 1, 0, 1, 0, 1, 0, 1],
+                [1, 0, 1, 6, 0, 0, 0, 0, 0, 0, 1, 6, 1],
+                [1, 6, 1, 7, 1, 1, 1, 0, 1, 0, 1, 0, 1],
                 [1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1],
-                [1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1],
+                [1, 0, 1, 0, 1, 0, 6, 0, 1, 0, 1, 0, 1],
                 [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
                 [1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1],
                 [1, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 1],
@@ -723,14 +755,30 @@
         const canvas = document.getElementById('gameCanvas');
         const ctx = canvas.getContext('2d');
         const tileMap = new TileMap(tileSize);
-        const pacman = tileMap.getPacMan(velocity);
-        const enemies = tileMap.getEnemies(velocity);
+        let pacman = tileMap.getPacMan(velocity);
+        let enemies = tileMap.getEnemies(velocity);
         /* getPacMan will return a new object of the PacMan class with the set velocity and position */
 
         let gameOver = false;
         let gameWin = false;
         const gameOverSound = new Audio('./sounds/gameOver.wav');
         const gameWinSound = new Audio('./sounds/gameWin.wav');
+
+        const deepCopy = (arr) => {    /* Ty medium.com */
+            let copy = [];
+            arr.forEach(elem => {
+                if (Array.isArray(elem)) {
+                    copy.push(deepCopy(elem));
+                } else {
+                    if (typeof elem === 'object') {
+                        copy.push(deepCopyObject(elem));
+                    } else {
+                        copy.push(elem);
+                    }
+                }
+            });
+            return copy;
+        }
 
         function gameLoop() {    // most important part of our application
             tileMap.draw(ctx);
@@ -740,6 +788,22 @@
             enemies.forEach(enemy => enemy.draw(ctx, pause(), pacman));
             checkGameOver();
             checkGameWin();
+            doRestart();
+        }
+
+        function doRestart() {
+            if ((gameWin || gameOver) && pacman.pacmanReset) {
+                pacman.madeFirstMove = false;
+                gameWin = false;
+                gameOver = false;
+                tileMap.map = deepCopy(tileMap.originmap);
+
+                /* Making new objects of enemies and Pac-Man */
+                enemies = tileMap.getEnemies(velocity);
+                pacman = tileMap.getPacMan(velocity);
+
+                document.getElementById("replay").style.display = "none";
+            }
         }
 
         function checkGameWin() {
@@ -747,6 +811,8 @@
                 gameWin = tileMap.didWin();
                 if (gameWin) {
                     gameWinSound.play();
+                    pacman.pacmanReset = false;
+                    document.getElementById("replay").style.display = "block";
                 }
             }
         }
@@ -756,6 +822,8 @@
                 gameOver = isGameOver();
                 if (gameOver) {
                     gameOverSound.play();
+                    pacman.pacmanReset = false;
+                    document.getElementById("replay").style.display = "block";
                 }
             }
         }
@@ -771,9 +839,9 @@
 
         function drawGameEnd() {
             if (gameOver || gameWin) {
-                let text = "    You Win!";
+                let text = "  You Win!";
                 if (gameOver) {
-                    text = "Game Over";
+                    text = " Game Over";
                 }
 
                 ctx.fillStyle = "black";
