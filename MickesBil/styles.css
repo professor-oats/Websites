@@ -146,6 +146,7 @@ body {
 .kommer-snart {
   min-height: 65vh;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 .rubrik1 {
@@ -246,7 +247,7 @@ p {
 
 }
 
-#line {
+.line {
   background-color: orange;
   width: 94%;
   height: 4px;
@@ -287,4 +288,204 @@ p {
   position: relative;
   top: 5px;
   padding-right: 8px;
+}
+
+.flex-image-gallery {
+  display: flex;
+  float: left;
+}
+
+.flex-image-element {
+  width: 150px;
+  height: auto;
+  padding: 3%;
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+
+.lightblue {
+  color: lightblue;
+}
+
+.px-m-left {
+  margin-left: 60px;
+}
+
+.profil-bil {
+  position: relative;
+  width: 30%;
+  height: auto;
+  margin-right: auto;    /* Vad hände här??? Det duger */
+  margin-left: 35%;
+  padding-bottom: 20px;
+}
+
+.orange {
+  color: orange;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.flipme {
+  position: relative;
+  height: auto;
+  margin-left: 25%;
+  padding-bottom: 20px;
+}
+
+.flipme .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+    
+}
+.flipme:hover .img-top {
+        display: inline;
+ }
+
+.px-pad-bottom {
+  padding-bottom: 30px;
+}
+
+.bigger {
+  font-size: 3em;
+}
+
+.big-move1 {    /* letterspacing combined with pre-line hotfix */
+  position: relative;
+  left: -14px;
+}
+
+.mob-move1 {
+  margin-top: 2%;
+}
+
+
+
+@media screen and (max-width: 1232px) {
+  #nav-bar {
+     position: relative;
+     display: block;
+  /* background-color: black;    /* rgb(15, 15, 97); */
+	 width: 100%;
+     font-size: 28px;
+  /* text-align: left; */
+  /* margin-bottom: -23px; */
+  }
+
+  #header {
+    padding: 0px;
+  }
+
+  #mainhead {
+	font-size: 48px;
+	margin: 0px;
+	border-radius: 0px 0px 0px 0px;
+	border: none;
+  }
+
+  #nav-bar a {
+	 display: block;
+	 border-radius: 0px 0px 0px 0px;
+   }
+
+   .rubrik1 {
+	  margin-top: 20px;
+	  font-size: 38px;
+	}
+
+	.rubrik2 {
+	  margin-top: 20px;
+	  font-size: 38px;
+    }
+
+	.rubrik3 {
+	  font-size: 28px;
+	}
+
+	.flipme {
+	  position: relative;
+	  margin-left: 0px;
+    }
+
+	#wrapper {
+	  margin-left: 0px;
+	  margin-right: 0px;
+	}
+
+	.flex-image-gallery {
+	  display: block;
+	  float: none;
+	}
+
+	.mob-move1 {
+		position: relative;
+		margin-left: -10%;
+	}
+
+	.mob-move2 {
+		white-space: pre-line;
+	}
+
+	.container-image-text {
+	  position: relative;
+	  top: 35px;
+	  left: 0px;
+	  margin: auto;
+	}
+
+	#avatar {
+	  display: block;
+	  margin-top: 20px;
+	  margin-left: auto;
+	  margin-right: auto;
+}
+
+	.big-move1 {
+	  left: 0px;
+	}
+
+
+/* Fixa ?? */
+/*
+	.aktivflik {
+	  border-right-width: 12px;
+	  border-right-color: gray;
+	}
+
+*/
+
+}
+
+/* Can check this for better ranging later on */
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+	
+	.px-m-left {
+  margin-left: 80px;
+}
+
+}
+
+@media screen and (max-width: 280px) {
+  #mainhead {
+	  font-size: 38px;
+	}
+
+	.container-image-text {
+	  position: relative;
+	  top: 35px;
+	  left: 0px;
+	  margin: auto;
+	  font-size: 10px;
+	}
+
+	.big-move1 {
+	  left: 0px;
+	}
+
 }

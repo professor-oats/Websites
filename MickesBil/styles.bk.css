@@ -2,8 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: none;
+}
+
+body {
   background-image: url("./circuit5.png");
-  /*Check if we want it pitch black or no */
+}
+
+@font-face {
+    font-family: pixelfont;
+    src: url('./fonts/PixelEmulator-xq08.ttf');
+}
+
+.center {
+  text-align: center;
 }
 
 #header {
@@ -15,9 +26,11 @@
   display: block;
   text-align: left;
   color: white;
-  font-size: 3.2em;
-  background-image: none;
-  background-color: black;
+  font-size: 5.2em;
+  background: linear-gradient(
+					127deg,
+					red 0%, orange 25%, #3e3947 75%, #3e3947 100%
+  );
   /* margin-top: -2%; */
   border-style: outset;
   border-width: 2px;
@@ -25,37 +38,449 @@
   padding-top: 4%;
   padding-bottom: 3%;
   margin-bottom: 35px;
+  border-radius: 8px;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
 }
 
 #nav-bar {
   position: relative;
   display: block;
-  background-image: none;
   /* background-color: black;    /* rgb(15, 15, 97); */
 
   font-size: 28px;
   text-align: left;
+  margin-bottom: -23px;
 }
 
 #nav-bar a {
-  background-image: none;
   padding-left: 3%;
   padding-right: 3%;
   padding-bottom: 0.7%;
   padding-top: 0.7%;
-  background-color: red;
+  /* background-color: red; */
   text-decoration: none;
   color: white;
+  border-radius: 8px 8px 0px 0px;
 }
 
 #nav-bar a:hover {
   cursor: pointer;
 }
 
+#nav-bar a:active {
+  background-color: #3e3947;
+}
+
+.aktivflik {
+  background-color: #3e3947;
+  border-style: outset;
+  border-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 12px;
+  border-left-color: #4e485a;
+  border-top-width: 5px;
+}
+
+.inaktivflik {
+  background-color: red;
+}
+
+
+#startsida {
+
+}
+
+#annonser {
+
+}
+
+#hett {
+
+}
+#kontakt {
+
+}
+
+#spela {
+
+}
+
+#planet {
+
+}
+
 #wrapper {
-  height: 100vh;
-  background-image: none;
-  background-color: rgb(62, 57, 71);
+  /* height: 100vh; */
+  background-color: rgb(62, 57, 71);    /* #3e3947 */
   margin-left: 2%;
   margin-right: 2%;
+  border-style: inset;
+  border-width: 12px;
+  border-color: #685d7e;
+  border-top-color: #988cae;    /* #988cae */
+  border-left-color: #988cae;    /* #a895ca */
+  border-right-color: #655d73;    /* #796f8a */
+  border-bottom-color: #655d73;
+  border-radius: 8px;
+  margin-top: -0.8%;
+}
+
+#gameCanvas {
+  box-shadow: 10px 10px 20px black;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    right: 18px;
+}
+
+#replay {
+  display: none;
+  margin-top: 2%;
+  padding-right: 3%;    /* Minor visual adjust */
+}
+
+.kommer-snart {
+  min-height: 65vh;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.rubrik1 {
+  position: relative;
+  font-size: 6em;
+  color: orange;
+  padding-right: 2%;    /* Minor visual adjust */
+  padding-top: 3%;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+
+  margin-bottom: 2%;
+}
+
+.rubrik2 {
+  position: relative;
+  font-size: 5em;
+  color: orange;
+  padding-right: 2%;    /* Minor visual adjust */
+  padding-top: 3%;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+
+  margin-bottom: 2%;
+}
+
+.rubrik3 {
+  display: inline;
+  position: relative;
+  font-size: 2em;
+  color: orange;
+  padding-right: 2%;    /* Minor visual adjust */
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+
+  margin-bottom: 2%;
+  margin-left: 3%;
+
+}
+
+.rubrikblock {
+  display: block;
+  position: relative;
+  font-size: 5em;
+  color: orange;
+  padding-right: 40px;    /* Minor visual adjust */
+  padding-top: 3%;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+
+  margin-bottom: 2%;
+}
+
+p {
+  font-size: 1.8em;
+  color: white;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+
+  margin-left: 3%;
+  margin-right: 2%;
+  letter-spacing: 1px;
+  font-family: monospace;
+}
+
+#sign {
+  color: orange;
+}
+
+#container-fire-img {
+
+}
+
+#img-fire {
+  position: relative;
+  z-index: 1;
+  margin-left: 23%;
+  width: 50%;
+}
+
+#img-big-car {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  width: 12%;
+  height: auto;
+  margin: 30% -30%;
+}
+
+#img-icon-car {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  width: 8%;
+  height: auto;
+  margin-bottom: -0.7%;
+  margin-left: -1.2%;
+
+}
+
+.line {
+  background-color: orange;
+  width: 94%;
+  height: 4px;
+  border-color: #000;
+  margin-left: 3%;
+
+}
+
+#avatar {
+  display: inline-block;
+  float: left;
+  margin-left: 20%;
+}
+
+.container-image-text {
+  position: relative;
+  top: 35px;
+  left: 35px;
+}
+
+.name {
+  font-size: 3em;
+  padding-bottom: 20px;
+  color: lightblue;
+}
+
+.more-spacing {
+  letter-spacing: 2px;
+}
+
+.link {
+  text-decoration: none;
+  color: lightblue;
+  /* letter-spacing: 1.5px; */
+}
+
+.push-down {
+  position: relative;
+  top: 5px;
+  padding-right: 8px;
+}
+
+.flex-image-gallery {
+  display: flex;
+  float: left;
+}
+
+.flex-image-element {
+  width: 150px;
+  height: auto;
+  padding: 3%;
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+
+.lightblue {
+  color: lightblue;
+}
+
+.px-m-left {
+  margin-left: 40px;
+}
+
+.profil-bil {
+  position: relative;
+  width: 30%;
+  height: auto;
+  margin-right: auto;    /* Vad hände här??? Det duger */
+  margin-left: 35%;
+  padding-bottom: 20px;
+}
+
+.orange {
+  color: orange;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.flipme {
+  position: relative;
+  height: auto;
+  margin-left: 25%;
+  padding-bottom: 20px;
+}
+
+.flipme .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+    
+}
+.flipme:hover .img-top {
+        display: inline;
+ }
+
+.px-pad-bottom {
+  padding-bottom: 30px;
+}
+
+.bigger {
+  font-size: 3em;
+}
+
+.big-move1 {    /* letterspacing combined with pre-line hotfix */
+  position: relative;
+  left: -14px;
+}
+
+.mob-move1 {
+  margin-top: 2%;
+}
+
+
+
+@media screen and (max-width: 1232px) {
+  #nav-bar {
+     position: relative;
+     display: block;
+  /* background-color: black;    /* rgb(15, 15, 97); */
+	 width: 100%;
+     font-size: 28px;
+  /* text-align: left; */
+  /* margin-bottom: -23px; */
+  }
+
+  #header {
+    padding: 0px;
+  }
+
+  #mainhead {
+	font-size: 48px;
+	margin: 0px;
+  }
+
+  #nav-bar a {
+	 display: block;
+   }
+
+   .rubrik1 {
+	  margin-top: 20px;
+	  font-size: 38px;
+	}
+
+	.rubrik2 {
+	  margin-top: 20px;
+	  font-size: 38px;
+    }
+
+	.rubrik3 {
+	  font-size: 28px;
+	}
+
+	.flipme {
+	  position: relative;
+	  margin-left: 0px;
+    }
+
+	#wrapper {
+	  margin-left: 0px;
+	  margin-right: 0px;
+	}
+
+	.flex-image-gallery {
+	  display: block;
+	  float: none;
+	}
+
+	.mob-move1 {
+		position: relative;
+		margin-left: -10%;
+	}
+
+	.mob-move2 {
+		white-space: pre-line;
+	}
+
+	.container-image-text {
+	  position: relative;
+	  top: 35px;
+	  left: 0px;
+	  margin: auto;
+	}
+
+	#avatar {
+	  display: block;
+	  margin-top: 20px;
+	  margin-left: auto;
+	  margin-right: auto;
+}
+
+	.big-move1 {
+	  left: 0px;
+	}
+
+
+/*
+	.kommer-snart {
+		overflow-x: auto;
+}
+
+*/
+
+}
+
+/* Can check this for better ranging later on */
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+	
+	.px-m-left {
+  margin-left: 80px;
+}
+
+}
+
+@media screen and (max-width: 280px) {
+  #mainhead {
+	  font-size: 38px;
+	}
+
+	.container-image-text {
+	  position: relative;
+	  top: 35px;
+	  left: 0px;
+	  margin: auto;
+	  font-size: 10px;
+	}
+
+	.big-move1 {
+	  left: 0px;
+	}
+
 }
