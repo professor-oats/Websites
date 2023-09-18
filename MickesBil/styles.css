@@ -72,7 +72,7 @@ body {
   background-color: #3e3947;
 }
 
-#startsida {
+.aktivflik {
   background-color: #3e3947;
   border-style: outset;
   border-width: 0px;
@@ -82,19 +82,32 @@ body {
   border-top-width: 5px;
 }
 
-#annonser {
+.inaktivflik {
   background-color: red;
+}
+
+
+#startsida {
+
+}
+
+#annonser {
+
 }
 
 #hett {
-  background-color: red;
+
 }
 #kontakt {
-  background-color: red;
+
 }
 
 #spela {
-  background-color: red;
+
+}
+
+#planet {
+
 }
 
 #wrapper {
@@ -113,11 +126,72 @@ body {
   margin-top: -0.8%;
 }
 
-#valkom {
+#gameCanvas {
+  box-shadow: 10px 10px 20px black;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    right: 18px;
+}
+
+#replay {
+  display: none;
+  margin-top: 2%;
+  padding-right: 3%;    /* Minor visual adjust */
+}
+
+.kommer-snart {
+  min-height: 65vh;
+  overflow: auto;
+}
+
+.rubrik1 {
   position: relative;
   font-size: 6em;
   color: orange;
   padding-right: 2%;    /* Minor visual adjust */
+  padding-top: 3%;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+
+  margin-bottom: 2%;
+}
+
+.rubrik2 {
+  position: relative;
+  font-size: 5em;
+  color: orange;
+  padding-right: 2%;    /* Minor visual adjust */
+  padding-top: 3%;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+
+  margin-bottom: 2%;
+}
+
+.rubrik3 {
+  display: inline;
+  position: relative;
+  font-size: 2em;
+  color: orange;
+  padding-right: 2%;    /* Minor visual adjust */
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+
+  margin-bottom: 2%;
+  margin-left: 3%;
+
+}
+
+.rubrikblock {
+  display: block;
+  position: relative;
+  font-size: 5em;
+  color: orange;
+  padding-right: 40px;    /* Minor visual adjust */
   padding-top: 3%;
   text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
              1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
@@ -141,9 +215,76 @@ p {
   color: orange;
 }
 
+#container-fire-img {
+
+}
+
 #img-fire {
   position: relative;
   z-index: 1;
   margin-left: 23%;
   width: 50%;
+}
+
+#img-big-car {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  width: 12%;
+  height: auto;
+  margin: 30% -30%;
+}
+
+#img-icon-car {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  width: 8%;
+  height: auto;
+  margin-bottom: -0.7%;
+  margin-left: -1.2%;
+
+}
+
+#line {
+  background-color: orange;
+  width: 94%;
+  height: 4px;
+  border-color: #000;
+  margin-left: 3%;
+
+}
+
+#avatar {
+  display: inline-block;
+  float: left;
+  margin-left: 20%;
+}
+
+.container-image-text {
+  position: relative;
+  top: 35px;
+  left: 35px;
+}
+
+.name {
+  font-size: 3em;
+  padding-bottom: 20px;
+  color: lightblue;
+}
+
+.more-spacing {
+  letter-spacing: 2px;
+}
+
+.link {
+  text-decoration: none;
+  color: lightblue;
+  /* letter-spacing: 1.5px; */
+}
+
+.push-down {
+  position: relative;
+  top: 5px;
+  padding-right: 8px;
 }
