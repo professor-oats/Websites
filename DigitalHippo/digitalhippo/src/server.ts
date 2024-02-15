@@ -6,15 +6,20 @@ import { nextHandler } from "./next-utils";
 import { nextApp } from "./next-utils";
 import * as trpcExpress from "@trpc/server/adapters/express"
 import { appRouter } from "./trpc";
+import { inferAsyncReturnType } from "@trpc/server";
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 
 /* enable trpcExpress server handling requests and responses */
 
-const createContext = ({req, res}: trpcExpress.CreateExpressContextOptions) => ({
+const createContext = ({
+  req, res
+  }: trpcExpress.CreateExpressContextOptions) => ({
   req, res,
 })
+
+export type ExpressContext = inferAsyncReturnType<typeof createContext>
 
 /* We will be using the payload template for our admin board */
 

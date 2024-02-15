@@ -4,10 +4,16 @@ import { Icons } from "./icons";
 import NavItems from "./NavItems";
 import { buttonVariants } from "./ui/button";
 import Cart from "./Cart";
+import { cookies } from "next/headers";
+import { getServerSideUser } from "@/lib/payload-utils";
 
-const Navbar = () => {
+const Navbar = async () => {
 
-  const user = null; /* Mocking user */
+  /* Get user through the login cookies */
+
+  const nextCookies = cookies()
+  const { user } = await getServerSideUser(nextCookies)
+  console.log(user);
 
   return(
     <div className="bg-white sticky z-50 top-0 inset-x-0 h-16">
@@ -33,7 +39,9 @@ const Navbar = () => {
 
                   {/* Let's render all the user functionalities here - signed in vs. not signed in */}
 
-                  {user ? null : (
+                  {user ? (
+                    <p></p>
+                  ) : (
                     <Link href="/sign-in" className={buttonVariants({variant: "ghost"})}>Sign in</Link>
                   )} {/* If no user signed in - show Sign in link */}
 
