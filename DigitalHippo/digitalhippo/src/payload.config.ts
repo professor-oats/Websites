@@ -5,6 +5,13 @@ import { slateEditor } from "@payloadcms/richtext-slate";
 import path from "path";
 import { Users } from "./collections/Users";
 import dotenv from "dotenv";
+import { Products } from "./collections/Products/Products";
+import { Media } from "./collections/Media";
+import { ProductFiles } from "./collections/ProductFile";
+import { Orders } from "./collections/Orders";
+
+/* Use this file to customise the admin dashboard and to
+connect it to MongoDB */
 
 dotenv.config({   /* Set the environment variables */
   path: path.resolve(__dirname, "../env")
@@ -12,7 +19,7 @@ dotenv.config({   /* Set the environment variables */
 
 export default buildConfig ({
   serverURL: process.env.NEXT_PUBLIC_SERVER_URL || '',
-  collections: [Users],
+  collections: [Users, Products, Media, ProductFiles, Orders],
   routes: {
     admin: '/sell'
   },

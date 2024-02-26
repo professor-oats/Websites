@@ -46,6 +46,7 @@ const Page = () => {
 
       if(origin) {
         router.push(`/${origin}`)   /* Redirect user back to his/her origin on sign-in, like if in cart or products page for example */
+        router.refresh()
         return
       }
 
@@ -55,6 +56,7 @@ const Page = () => {
       }
 
       router.push("/")    /* If no matches above push user to homepage */
+      router.refresh()
 
     },
 
