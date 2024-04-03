@@ -1,12 +1,13 @@
 import Link from "next/link";
 import MaxWidthWrapper from "./MaxWIdthWrapper";
-import { Icons } from "./icons";
+import { Icons } from "./Icons"
 import NavItems from "./NavItems";
 import { buttonVariants } from "./ui/button";
 import Cart from "./Cart";
 import { cookies } from "next/headers";
 import { getServerSideUser } from "@/lib/payload-utils";
 import UserAccountNav from "./UserAccountNav";
+import MobileNav from './MobileNav'
 
 const Navbar = async () => {
 

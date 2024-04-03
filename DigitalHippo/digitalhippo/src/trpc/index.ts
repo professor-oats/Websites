@@ -1,6 +1,7 @@
 import { z } from "zod"
 import { publicProcedure, router } from "./trpc";
 import { authRouter } from "./auth-router";
+import { paymentRouter } from "./payment-router";
 import { QueryValidator } from "../lib/validators/query-validator";
 import { getPayloadClient } from "../get-payload";
 
@@ -9,6 +10,7 @@ import { getPayloadClient } from "../get-payload";
 
 export const appRouter = router({
   auth: authRouter,
+  payment: paymentRouter,
 
   getInfiniteProducts: publicProcedure.input(z.object({
     limit: z.number().min(1).max(100),
