@@ -10,6 +10,7 @@ export function mongooseConnect() {
   }
 
   // Else make a new connection to the mongodb
+  /* Will process expand the env properly?? */
   else {
     const uri = process.env.MONGODB_URI;
     return mongoose.connect(uri);
