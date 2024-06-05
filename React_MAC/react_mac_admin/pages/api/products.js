@@ -11,7 +11,17 @@ export default async function handle(req, res) {
   await mongooseConnect();
 
   if (method === 'GET') {
-    res.json(await Product.find());
+
+    /* If we have id in query we simply respond json
+       for that product, else we respond json for all
+     */
+
+    if(req.query?.id) {
+      res.json(await Product.findOne({_id:req.query.id}))
+    }
+    else {
+      res.json(await Product.find());
+    }
   }
 
   if(method === 'POST') {
